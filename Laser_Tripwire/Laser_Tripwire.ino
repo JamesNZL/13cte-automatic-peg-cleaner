@@ -1,27 +1,25 @@
 int sensorPin = A0;
 int sensorValue = 0;
-int initialValue = 0;
-int triggerValue = 0;
+int disarmedValue = 0;
+int triggerAt = 0;
+int testTotal = 0;
+const testIterations = 5;
 const armedValue = 1000;
-
-int initial1 = 0;
-int initial2 = 0;
-int initial3 = 0;
-int initial4 = 0;
-int initial5 = 0;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
 
-  initial1 = analogRead(sensorPin);
-  initial2 = analogRead(sensorPin);
-  initial3 = analogRead(sensorPin);
-  initial4 = analogRead(sensorPin);
-  initial5 = analogRead(sensorPin);
-  initialValue = (initial1 + initial2 + initial3 + initial4 + initial5) / 5;
-  
-  triggerValue = armedValue - (initialValue / 2);
+  // TURN LASER MODULE OFF
+
+  for (int i = 0; i <= (testIterations - 1); i++) {
+    testTotal += analogRead(sensorValue);
+  }
+
+  disarmedValue = testTotal / testIterations;
+  triggerAt = armedValue - (disarmedValue / 2);
+
+  // TURN LASER MODULE ON
 }
 
 void loop() {
