@@ -14,8 +14,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  sensorValue = analogRead(sensorPin);
+  
   while (sensorValue >= triggerValue) {
     sensorValue = analogRead(sensorPin);
     Serial.println(sensorValue);
   }
+
+  Serial.println("Triggered");
 }
