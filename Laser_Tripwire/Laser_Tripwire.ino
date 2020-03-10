@@ -4,7 +4,7 @@ int triggerAt = 0;                                          // variable for what
 int testTotal = 0;                                          // iterative variable to record total of (testIterations) readings from LDR when initialising
 const int sensorPin = A0;                                   // LDR 'signal' pin
 const int testIterations = 5;                               // number of readings to perform when initialising
-const int armedValue = 1000;                                // maximum reading possible from LDR, therefore reading when laser is 'armed'
+const int armedValue = 1023;                                // maximum reading possible from LDR, therefore reading when laser is 'armed'
 
 void setup() {
   Serial.begin(9600);                                       // initialise serial monitor at 9600 baud
