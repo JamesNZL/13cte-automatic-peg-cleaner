@@ -7,6 +7,8 @@ const int testIterations = 5;                               // number of reading
 const int armedValue = 1023;                                // maximum reading possible from LDR, therefore reading when laser is 'armed'
 
 void setup() {
+  pinMode(sensorPin, INPUT);                                // defines (sensorPin) as an input pin
+  
   Serial.begin(9600);                                       // initialise serial monitor at 9600 baud
 
   // TURN LASER MODULE OFF
