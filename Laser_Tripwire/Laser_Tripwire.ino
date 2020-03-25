@@ -31,6 +31,6 @@ void loop() {
     Serial.println(sensorValue);                            // print current value to serial monitor (for debugging)
   }
 
-  Serial.print("Triggered @ ");                              // if tripwire is broken, print 'Triggered' to serial monitor
+  Serial.print("Triggered @ ");                             // if tripwire is broken, print 'Triggered' to serial monitor
   Serial.println(sensorValue);
 }
