@@ -20,16 +20,6 @@ void setup() {
   
   Serial.begin(9600);                                       // initialise serial monitor at 9600 baud
 
-  digitalWrite(laserPin, HIGH);                             // engage laser to determine if tripwire system is functioning
-
-  delay(250);                                               // pause to ensure laser is engaged prior to below reading
-  
-  if (analogRead(sensorPin) < armedValue) {                 // if analogue reading from LDR indicates the tripwire is disarmed, do the following
-    digitalWrite(redPin, HIGH);                             // turn red LED on
-    digitalWrite(greenPin, LOW);                            // turn green LED off
-    digitalWrite(bluePin, LOW);                             // turn blue LED off
-  }
-
   digitalWrite(laserPin, LOW);                              // disengage laser for preliminary sensor reading
 
   for (int i = 0; i <= (testIterations - 1); i++) {         // perform the following actions (testIterations) times
@@ -42,8 +32,14 @@ void setup() {
   digitalWrite(laserPin, HIGH);                             // engage laser tripwire
 
   delay(250);                                               // pause to ensure laser is engaged prior to below reading
+
+  if (analogRead(sensorPin) < armedValue) {                 // if analogue reading from LDR indicates the tripwire is disarmed, do the following
+    digitalWrite(redPin, HIGH);                             // turn red LED on
+    digitalWrite(greenPin, LOW);                            // turn green LED off
+    digitalWrite(bluePin, LOW);                             // turn blue LED off
+  }
   
-  if (analogRead(sensorPin) > armedValue) {                 // if analogue reading from LDR indicates the tripwire is disarmed, do the following
+  else if (analogRead(sensorPin) > armedValue) {            // if analogue reading from LDR indicates the tripwire is disarmed, do the following
     digitalWrite(redPin, LOW);                              // turn red LED off
     digitalWrite(greenPin, HIGH);                           // turn green LED on
     digitalWrite(bluePin, LOW);                             // turn blue LED off
