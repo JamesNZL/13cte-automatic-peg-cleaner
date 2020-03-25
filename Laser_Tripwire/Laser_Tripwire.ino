@@ -12,6 +12,7 @@ void setup() {
   pinMode(laserPin, OUTPUT);                                // defines (laserPin) as an output pin
   
   Serial.begin(9600);                                       // initialise serial monitor at 9600 baud
+  Serial.println("Testing");
 
   digitalWrite(laserPin, LOW);                              // disengage laser for preliminary sensor reading
 
@@ -21,6 +22,8 @@ void setup() {
 
   disarmedValue = testTotal / testIterations;               // set (disarmedValue) equal to average of the (testIterations) tests
   triggerAt = armedValue - (disarmedValue / 2);             // set (triggerAt) to mid point between 'armed' and 'disarmed' / 'triggered'
+
+  Serial.println(triggerAt);
 
   digitalWrite(laserPin, HIGH);                             // engage laser tripwire
 }
