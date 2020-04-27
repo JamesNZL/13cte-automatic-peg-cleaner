@@ -1,0 +1,39 @@
+{
+  "uuid": "7449923668de4b9c4b7197d633bf3c44",
+  "path": "Offline/Automatic Peg Cleaner",
+  "name": "Automatic Peg Cleaner",
+  "content": "",
+  "created_at": "2020-04-27 12:50:29",
+  "updated_at": "2020-04-27 12:51:01",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "0ecd96c546b5dc078c6e2ef9421e9efb",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {},
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ]
+      ],
+      "updateTime": 1587948661,
+      "createTime": 1587948661,
+      "histories": [],
+      "created_at": "2020-04-27 12:51:01",
+      "updated_at": "2020-04-27 12:51:01"
+    }
+  ],
+  "sort": [],
+  "title": "Automatic Peg Cleaner",
+  "foldername": "Automatic Peg Cleaner",
+  "schfilename": "Automatic Peg Cleaner.json",
+  "schfilemtime": 1587948661328
+}
