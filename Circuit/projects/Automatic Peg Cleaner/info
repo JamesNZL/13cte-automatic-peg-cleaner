@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-27 16:43:22",
+  "updated_at": "2020-04-27 17:34:16",
   "stick": "",
   "documents": [
     {
@@ -25,7 +25,8 @@
         "7afd1c549ad243c682d30ba970d6e45e": 1,
         "e9f71c2386074942b7cef259c39e047b": 1,
         "d3312fa78c9c45c7a0baa313b1f73174": 1,
-        "3b0a7353dc034b4f847efb516a5f71cf": 2
+        "3b0a7353dc034b4f847efb516a5f71cf": 2,
+        "c99793551ddc493fe44ee4790dc56864": 2
       },
       "BOM": [
         [
@@ -39,7 +40,7 @@
           "Solenoid Valve",
           2,
           "2 PIN POLARISED",
-          "L1,L2",
+          "L2,L1",
           {
             "BOM_Manufacturer": "",
             "BOM_Manufacturer Part": "",
@@ -89,7 +90,7 @@
           "100K",
           4,
           "RES-TH_BD4.0-L11.5-P15.50-D0.7",
-          "R8,R1,R5,R2",
+          "R2,R8,R5,R1",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Supplier Part": "C173064",
@@ -100,10 +101,24 @@
           }
         ],
         [
+          "1N5821",
+          2,
+          "DO-201AD_BD5.3-L8.4-P12.50-D1.4-RD",
+          "D3,D2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "ON",
+            "BOM_Manufacturer Part": "1N5821RLG",
+            "BOM_Supplier Part": "C9119",
+            "puuid": "ba4a753162c8448790556d107c1b6560",
+            "uuid": "c99793551ddc493fe44ee4790dc56864"
+          }
+        ],
+        [
           "220",
           3,
           "RES-TH_BD3.3-L9.0-P13.00-D0.6",
-          "R7,R3,R6",
+          "R3,R6,R7",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Supplier Part": "C385596",
@@ -157,7 +172,7 @@
           "IRL3705N",
           3,
           "TO-220-3_L10.0-W4.5-P2.54-T",
-          "Q3,Q1,Q4",
+          "Q3,Q4,Q1",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Manufacturer": "IR",
@@ -182,16 +197,16 @@
           }
         ]
       ],
-      "updateTime": 1587962602,
+      "updateTime": 1587965656,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-27 16:43:22"
+      "updated_at": "2020-04-27 17:34:16"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1587962602762
+  "schfilemtime": 1587965656372
 }
