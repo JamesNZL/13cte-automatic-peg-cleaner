@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-27 12:51:01",
+  "updated_at": "2020-04-27 13:47:15",
   "stick": "",
   "documents": [
     {
@@ -14,7 +14,14 @@
       "docType": "1",
       "master": "",
       "thumb": "/images/thumb-default.png",
-      "components": {},
+      "components": {
+        "d0dc5e8f7920458dbababb98afd96517": 1,
+        "9400f6f21d7349fd96b46bd062c9ba63": 2,
+        "fae120f7435b4107aefda4628c7f698f": 1,
+        "f336323cc9644812822f32b4040fa02f": 1,
+        "d186ad540901431a9742b1e937ed208f": 2,
+        "9e36f8ea18cff38b078125421bca2307": 1
+      },
       "BOM": [
         [
           "Value",
@@ -22,18 +29,101 @@
           "Package",
           "Components",
           "CustomPara"
+        ],
+        [
+          "10uF",
+          1,
+          "CAP-TH_L15.5-W8.5-P7.50-D1.2",
+          "C1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "AVX",
+            "BOM_Manufacturer Part": "TAP106K025SCS",
+            "BOM_Supplier Part": "C28244",
+            "puuid": "1cb4b7e1362f415ba89ca82885fa1cd4",
+            "uuid": "9e36f8ea18cff38b078125421bca2307"
+          }
+        ],
+        [
+          "100K",
+          2,
+          "RES-TH_BD4.0-L11.5-P15.50-D0.7",
+          "R2,R1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C173064",
+            "BOM_Manufacturer": "YAGEO",
+            "BOM_Manufacturer Part": "MFR2WSFTE73-100K",
+            "puuid": "8523e7b14fb448438704de66b9e3b7b9",
+            "uuid": "9400f6f21d7349fd96b46bd062c9ba63"
+          }
+        ],
+        [
+          "220",
+          1,
+          "RES-TH_BD3.3-L9.0-P13.00-D0.6",
+          "R3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C385596",
+            "BOM_Manufacturer": "TyoHM",
+            "BOM_Manufacturer Part": "RN1/2W220ΩFT/BA1",
+            "puuid": "987b1ed46f1743c9a1f55a2893a33c05",
+            "uuid": "d0dc5e8f7920458dbababb98afd96517"
+          }
+        ],
+        [
+          "Button",
+          2,
+          "NEWPCBLIB",
+          "SW2,SW1",
+          {
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "f07c6673549f41cfb342a159f58b1b48",
+            "uuid": "d186ad540901431a9742b1e937ed208f"
+          }
+        ],
+        [
+          "IRL3705NPBF",
+          1,
+          "TO-220-3_L10.0-W4.5-P2.54-T",
+          "Q1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "IR",
+            "BOM_Manufacturer Part": "IRL3705NPBF",
+            "BOM_Supplier Part": "C2667",
+            "puuid": "fb8b10620b5a459d9b03fd14987346f4",
+            "uuid": "f336323cc9644812822f32b4040fa02f"
+          }
+        ],
+        [
+          "NDP6020P",
+          1,
+          "TO-220-3_L10.0-W4.5-P2.54-T",
+          "Q2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C68561",
+            "BOM_Manufacturer": "ON Semicon",
+            "BOM_Manufacturer Part": "NDP6020P",
+            "puuid": "fb8b10620b5a459d9b03fd14987346f4",
+            "uuid": "fae120f7435b4107aefda4628c7f698f"
+          }
         ]
       ],
-      "updateTime": 1587948661,
+      "updateTime": 1587952035,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-27 12:51:01"
+      "updated_at": "2020-04-27 13:47:15"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1587948661328
+  "schfilemtime": 1587952035662
 }
