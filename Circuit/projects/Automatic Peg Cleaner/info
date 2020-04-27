@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-27 20:38:44",
+  "updated_at": "2020-04-27 21:12:46",
   "stick": "",
   "documents": [
     {
@@ -15,12 +15,9 @@
       "master": "",
       "thumb": "/images/thumb-default.png",
       "components": {
-        "9400f6f21d7349fd96b46bd062c9ba63": 4,
         "f336323cc9644812822f32b4040fa02f": 3,
-        "9e36f8ea18cff38b078125421bca2307": 1,
         "d0dc5e8f7920458dbababb98afd96517": 3,
         "fae120f7435b4107aefda4628c7f698f": 1,
-        "d186ad540901431a9742b1e937ed208f": 3,
         "33ebe96c76ec4cd8a9c65ca2e3612e6c": 1,
         "7afd1c549ad243c682d30ba970d6e45e": 1,
         "e9f71c2386074942b7cef259c39e047b": 3,
@@ -28,7 +25,10 @@
         "3b0a7353dc034b4f847efb516a5f71cf": 2,
         "c99793551ddc493fe44ee4790dc56864": 2,
         "ad14f0063122492a868bfbb7938f965a": 1,
-        "33b6d60c27644fc2831452163533f929": 1
+        "33b6d60c27644fc2831452163533f929": 1,
+        "d186ad540901431a9742b1e937ed208f": 3,
+        "93e8035a86ca4b4b963be991ecd30def": 1,
+        "bf0b42e94b7c4179a13a0b9a4ac8e42b": 4
       },
       "BOM": [
         [
@@ -42,7 +42,7 @@
           "Solenoid Valve",
           2,
           "2 PIN POLARISED",
-          "L2,L1",
+          "L1,L2",
           {
             "BOM_Manufacturer": "",
             "BOM_Manufacturer Part": "",
@@ -55,26 +55,15 @@
         [
           "LDR",
           1,
-          "SNR2-3.0",
+          "2 PIN",
           "S1",
           {
-            "BOM_Manufacturer Part": "Photoresistor-5528",
-            "puuid": "a57a937f379f4bb6b77be9c40b3970e9",
-            "uuid": "7afd1c549ad243c682d30ba970d6e45e"
-          }
-        ],
-        [
-          "10uF",
-          1,
-          "CAP-TH_L15.5-W8.5-P7.50-D1.2",
-          "C1",
-          {
+            "BOM_Manufacturer Part": "GL5528",
             "BOM_Supplier": "LCSC",
-            "BOM_Manufacturer": "AVX",
-            "BOM_Manufacturer Part": "TAP106K025SCS",
-            "BOM_Supplier Part": "C28244",
-            "puuid": "1cb4b7e1362f415ba89ca82885fa1cd4",
-            "uuid": "9e36f8ea18cff38b078125421bca2307"
+            "BOM_Supplier Part": "C125627",
+            "BOM_Manufacturer": "Senba",
+            "puuid": "509a05ef2e964ed9a4248db6deac6645",
+            "uuid": "7afd1c549ad243c682d30ba970d6e45e"
           }
         ],
         [
@@ -103,17 +92,17 @@
           }
         ],
         [
-          "100K",
-          4,
-          "RES-TH_BD4.0-L11.5-P15.50-D0.7",
-          "R8,R6,R1,R2",
+          "10uF",
+          1,
+          "CAP-TH_L5.9-W4.2-P5.08-D0.5",
+          "C1",
           {
             "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C173064",
-            "BOM_Manufacturer": "YAGEO",
-            "BOM_Manufacturer Part": "MFR2WSFTE73-100K",
-            "puuid": "8523e7b14fb448438704de66b9e3b7b9",
-            "uuid": "9400f6f21d7349fd96b46bd062c9ba63"
+            "BOM_Supplier Part": "C454406",
+            "BOM_Manufacturer": "火炬",
+            "BOM_Manufacturer Part": "CT4G-1210-X5R-50V-10μF-K",
+            "puuid": "3bc313fd3d674495a915694beff6c6b2",
+            "uuid": "93e8035a86ca4b4b963be991ecd30def"
           }
         ],
         [
@@ -131,10 +120,24 @@
           }
         ],
         [
+          "100K",
+          4,
+          "RES-TH_BD4.5-L11.0-P15.00-D0.7",
+          "R2,R6,R8,R1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C433622",
+            "BOM_Manufacturer": "TyoHM",
+            "BOM_Manufacturer Part": "RN 2WS 100K F T/B A1",
+            "puuid": "86743c5ba9ba4adc92807ca486640f95",
+            "uuid": "bf0b42e94b7c4179a13a0b9a4ac8e42b"
+          }
+        ],
+        [
           "1N5821",
           2,
           "DO-201AD_BD5.3-L8.4-P12.50-D1.4-RD",
-          "D4,D3",
+          "D3,D4",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Manufacturer": "ON",
@@ -160,27 +163,14 @@
         ],
         [
           "Button",
-          2,
+          3,
           "2 PIN",
-          "SW3,SW2",
+          "SW3,SW2,SW1",
           {
             "BOM_Manufacturer Part": "",
             "BOM_Supplier Part": "",
             "BOM_Supplier": "",
             "puuid": "509a05ef2e964ed9a4248db6deac6645",
-            "uuid": "d186ad540901431a9742b1e937ed208f"
-          }
-        ],
-        [
-          "Button",
-          1,
-          "NEWPCBLIB",
-          "SW1",
-          {
-            "BOM_Manufacturer Part": "",
-            "BOM_Supplier Part": "",
-            "BOM_Supplier": "",
-            "puuid": "f07c6673549f41cfb342a159f58b1b48",
             "uuid": "d186ad540901431a9742b1e937ed208f"
           }
         ],
@@ -201,7 +191,7 @@
           "10K",
           3,
           "RES-TH_BD2.3-L6.5-P10.50-D0.5",
-          "R4,R5,R10",
+          "R10,R5,R4",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Supplier Part": "C119347",
@@ -240,16 +230,16 @@
           }
         ]
       ],
-      "updateTime": 1587976724,
+      "updateTime": 1587978766,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-27 20:38:44"
+      "updated_at": "2020-04-27 21:12:46"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1587976724456
+  "schfilemtime": 1587978766226
 }
