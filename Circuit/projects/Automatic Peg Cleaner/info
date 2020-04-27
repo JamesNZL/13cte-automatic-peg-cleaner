@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-27 14:23:33",
+  "updated_at": "2020-04-27 14:54:32",
   "stick": "",
   "documents": [
     {
@@ -21,7 +21,10 @@
         "9e36f8ea18cff38b078125421bca2307": 1,
         "d0dc5e8f7920458dbababb98afd96517": 1,
         "fae120f7435b4107aefda4628c7f698f": 1,
-        "33ebe96c76ec4cd8a9c65ca2e3612e6c": 1
+        "33ebe96c76ec4cd8a9c65ca2e3612e6c": 1,
+        "7afd1c549ad243c682d30ba970d6e45e": 1,
+        "e9f71c2386074942b7cef259c39e047b": 1,
+        "d3312fa78c9c45c7a0baa313b1f73174": 1
       },
       "BOM": [
         [
@@ -30,6 +33,17 @@
           "Package",
           "Components",
           "CustomPara"
+        ],
+        [
+          "LDR",
+          1,
+          "SNR2-3.0",
+          "U1",
+          {
+            "BOM_Manufacturer Part": "Photoresistor-5528",
+            "puuid": "a57a937f379f4bb6b77be9c40b3970e9",
+            "uuid": "7afd1c549ad243c682d30ba970d6e45e"
+          }
         ],
         [
           "10uF",
@@ -98,6 +112,33 @@
           }
         ],
         [
+          "Laser",
+          1,
+          "2 PIN THROUGH HOLE",
+          "D1",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "f07c6673549f41cfb342a159f58b1b48",
+            "uuid": "d3312fa78c9c45c7a0baa313b1f73174"
+          }
+        ],
+        [
+          "10K",
+          1,
+          "RES-TH_BD2.3-L6.5-P10.50-D0.5",
+          "R4",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C119347",
+            "BOM_Manufacturer": "Chian Chia Elec",
+            "BOM_Manufacturer Part": "-",
+            "puuid": "9ea59130ae074fa3abe27de8cbf71d91",
+            "uuid": "e9f71c2386074942b7cef259c39e047b"
+          }
+        ],
+        [
           "IRL3705N",
           1,
           "TO-220-3_L10.0-W4.5-P2.54-T",
@@ -126,16 +167,16 @@
           }
         ]
       ],
-      "updateTime": 1587954213,
+      "updateTime": 1587956072,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-27 14:23:33"
+      "updated_at": "2020-04-27 14:54:32"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1587954213308
+  "schfilemtime": 1587956072943
 }
