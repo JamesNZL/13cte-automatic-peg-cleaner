@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-27 14:54:32",
+  "updated_at": "2020-04-27 15:00:12",
   "stick": "",
   "documents": [
     {
@@ -38,7 +38,7 @@
           "LDR",
           1,
           "SNR2-3.0",
-          "U1",
+          "S1",
           {
             "BOM_Manufacturer Part": "Photoresistor-5528",
             "puuid": "a57a937f379f4bb6b77be9c40b3970e9",
@@ -112,7 +112,7 @@
           }
         ],
         [
-          "Laser",
+          "Laser Diode",
           1,
           "2 PIN THROUGH HOLE",
           "D1",
@@ -167,16 +167,16 @@
           }
         ]
       ],
-      "updateTime": 1587956072,
+      "updateTime": 1587956412,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-27 14:54:32"
+      "updated_at": "2020-04-27 15:00:12"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1587956072943
+  "schfilemtime": 1587956412725
 }
