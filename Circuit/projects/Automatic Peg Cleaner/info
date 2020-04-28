@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-28 20:26:39",
+  "updated_at": "2020-04-28 20:28:07",
   "stick": "",
   "documents": [
     {
@@ -242,11 +242,11 @@
           }
         ]
       ],
-      "updateTime": 1588054191,
+      "updateTime": 1588062463,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-28 18:09:51"
+      "updated_at": "2020-04-28 20:27:43"
     },
     {
       "uuid": "34514fbac4e2f52d8464aa5bbd1560c6",
@@ -271,16 +271,16 @@
         "fb8b10620b5a459d9b03fd14987346f4": 4
       },
       "BOM": [],
-      "updateTime": 1588062399,
+      "updateTime": 1588062487,
       "createTime": 1588053009,
       "histories": [],
       "created_at": "2020-04-28 17:50:09",
-      "updated_at": "2020-04-28 20:26:39"
+      "updated_at": "2020-04-28 20:28:07"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588054191255
+  "schfilemtime": 1588062463561
 }
