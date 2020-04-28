@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-28 16:48:55",
+  "updated_at": "2020-04-28 17:46:53",
   "stick": "",
   "documents": [
     {
@@ -28,7 +28,8 @@
         "33b6d60c27644fc2831452163533f929": 1,
         "d186ad540901431a9742b1e937ed208f": 3,
         "93e8035a86ca4b4b963be991ecd30def": 1,
-        "bf0b42e94b7c4179a13a0b9a4ac8e42b": 4
+        "bf0b42e94b7c4179a13a0b9a4ac8e42b": 4,
+        "c413213bd5844768ac71f167db384dab": 1
       },
       "BOM": [
         [
@@ -83,11 +84,11 @@
         [
           "Arduino",
           1,
-          "ARDUINO UNO R3",
+          "UNO_R3_SHIELD",
           "J1",
           {
             "BOM_Manufacturer Part": "",
-            "puuid": "17524975476e4b0e802837ba038b33b8",
+            "puuid": "67a9f92ea3d9497ebc447eb23a447228",
             "uuid": "33ebe96c76ec4cd8a9c65ca2e3612e6c"
           }
         ],
@@ -123,7 +124,7 @@
           "100K",
           4,
           "RES-TH_BD4.5-L11.0-P15.00-D0.7",
-          "R2,R6,R8,R1",
+          "R1,R6,R2,R8",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Supplier Part": "C433622",
@@ -134,10 +135,21 @@
           }
         ],
         [
+          "7.4V",
+          1,
+          "2 PIN POLARISED",
+          "BAT1",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "f07c6673549f41cfb342a159f58b1b48",
+            "uuid": "c413213bd5844768ac71f167db384dab"
+          }
+        ],
+        [
           "1N5821",
           2,
           "DO-201AD_BD5.3-L8.4-P12.50-D1.4-RD",
-          "D3,D4",
+          "D4,D3",
           {
             "BOM_Supplier": "LCSC",
             "BOM_Manufacturer": "ON",
@@ -165,7 +177,7 @@
           "Button",
           3,
           "2 PIN",
-          "SW3,SW2,SW1",
+          "SW2,SW1,SW3",
           {
             "BOM_Manufacturer Part": "",
             "BOM_Supplier Part": "",
@@ -230,16 +242,16 @@
           }
         ]
       ],
-      "updateTime": 1588049335,
+      "updateTime": 1588052813,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-28 16:48:55"
+      "updated_at": "2020-04-28 17:46:53"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588049335874
+  "schfilemtime": 1588052813420
 }
