@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-28 21:59:42",
+  "updated_at": "2020-04-28 22:48:16",
   "stick": "",
   "documents": [
     {
@@ -242,11 +242,11 @@
           }
         ]
       ],
-      "updateTime": 1588062463,
+      "updateTime": 1588070896,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-28 20:27:43"
+      "updated_at": "2020-04-28 22:48:16"
     },
     {
       "uuid": "34514fbac4e2f52d8464aa5bbd1560c6",
@@ -276,11 +276,40 @@
       "histories": [],
       "created_at": "2020-04-28 17:50:09",
       "updated_at": "2020-04-28 21:59:42"
+    },
+    {
+      "uuid": "c0aeb1a26cf67e989a5698663dbe8a47",
+      "puuid": "7449923668de4b9c4b7197d633bf3c44",
+      "title": "PCB(autorouter)",
+      "filename": "PCB(autorouter).json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f07c6673549f41cfb342a159f58b1b48": 4,
+        "509a05ef2e964ed9a4248db6deac6645": 4,
+        "ca138cd368cd4dc289ea969a446fb4a4": 1,
+        "17524975476e4b0e802837ba038b33b8": 1,
+        "3bc313fd3d674495a915694beff6c6b2": 1,
+        "2bdb16cbf9314400b61ad7423d68e181": 1,
+        "86743c5ba9ba4adc92807ca486640f95": 4,
+        "ba4a753162c8448790556d107c1b6560": 2,
+        "987b1ed46f1743c9a1f55a2893a33c05": 3,
+        "9ea59130ae074fa3abe27de8cbf71d91": 3,
+        "fb8b10620b5a459d9b03fd14987346f4": 4
+      },
+      "BOM": [],
+      "updateTime": 1588068040,
+      "createTime": 1588068040,
+      "histories": [],
+      "created_at": "2020-04-28 22:00:40",
+      "updated_at": "2020-04-28 22:00:40"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588062463561
+  "schfilemtime": 1588070896065
 }
