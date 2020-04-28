@@ -4,12 +4,12 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-28 17:46:53",
+  "updated_at": "2020-04-28 17:50:13",
   "stick": "",
   "documents": [
     {
       "uuid": "0ecd96c546b5dc078c6e2ef9421e9efb",
-      "title": "Sheet_1",
+      "title": "Circuit Diagram",
       "description": "",
       "docType": "1",
       "master": "",
@@ -84,11 +84,11 @@
         [
           "Arduino",
           1,
-          "UNO_R3_SHIELD",
+          "ARDUINO UNO R3",
           "J1",
           {
             "BOM_Manufacturer Part": "",
-            "puuid": "67a9f92ea3d9497ebc447eb23a447228",
+            "puuid": "17524975476e4b0e802837ba038b33b8",
             "uuid": "33ebe96c76ec4cd8a9c65ca2e3612e6c"
           }
         ],
@@ -242,16 +242,45 @@
           }
         ]
       ],
-      "updateTime": 1588052813,
+      "updateTime": 1588052990,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-28 17:46:53"
+      "updated_at": "2020-04-28 17:49:50"
+    },
+    {
+      "uuid": "34514fbac4e2f52d8464aa5bbd1560c6",
+      "puuid": "7449923668de4b9c4b7197d633bf3c44",
+      "title": "PCB",
+      "filename": "PCB.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f07c6673549f41cfb342a159f58b1b48": 4,
+        "509a05ef2e964ed9a4248db6deac6645": 4,
+        "ca138cd368cd4dc289ea969a446fb4a4": 1,
+        "17524975476e4b0e802837ba038b33b8": 1,
+        "3bc313fd3d674495a915694beff6c6b2": 1,
+        "2bdb16cbf9314400b61ad7423d68e181": 1,
+        "86743c5ba9ba4adc92807ca486640f95": 4,
+        "ba4a753162c8448790556d107c1b6560": 2,
+        "987b1ed46f1743c9a1f55a2893a33c05": 3,
+        "9ea59130ae074fa3abe27de8cbf71d91": 3,
+        "fb8b10620b5a459d9b03fd14987346f4": 4
+      },
+      "BOM": [],
+      "updateTime": 1588053009,
+      "createTime": 1588053009,
+      "histories": [],
+      "created_at": "2020-04-28 17:50:09",
+      "updated_at": "2020-04-28 17:50:09"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588052813420
+  "schfilemtime": 1588052990600
 }
