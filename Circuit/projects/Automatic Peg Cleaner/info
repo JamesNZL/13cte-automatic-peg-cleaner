@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-04-30 20:40:17",
+  "updated_at": "2020-04-30 20:42:49",
   "stick": "",
   "documents": [
     {
@@ -298,11 +298,11 @@
         "fb8b10620b5a459d9b03fd14987346f4": 4
       },
       "BOM": [],
-      "updateTime": 1588236017,
+      "updateTime": 1588236169,
       "createTime": 1588156315,
       "histories": [],
       "created_at": "2020-04-29 22:31:55",
-      "updated_at": "2020-04-30 20:40:17"
+      "updated_at": "2020-04-30 20:42:49"
     }
   ],
   "sort": [],
