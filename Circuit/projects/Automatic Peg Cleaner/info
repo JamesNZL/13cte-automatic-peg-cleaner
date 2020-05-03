@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-05-02 17:52:05",
+  "updated_at": "2020-05-04 11:15:55",
   "stick": "",
   "documents": [
     {
@@ -15,21 +15,21 @@
       "master": "",
       "thumb": "/images/thumb-default.png",
       "components": {
-        "d0dc5e8f7920458dbababb98afd96517": 3,
-        "fae120f7435b4107aefda4628c7f698f": 1,
-        "f336323cc9644812822f32b4040fa02f": 3,
         "33ebe96c76ec4cd8a9c65ca2e3612e6c": 1,
         "7afd1c549ad243c682d30ba970d6e45e": 1,
-        "e9f71c2386074942b7cef259c39e047b": 3,
         "d3312fa78c9c45c7a0baa313b1f73174": 1,
         "3b0a7353dc034b4f847efb516a5f71cf": 2,
-        "c99793551ddc493fe44ee4790dc56864": 2,
         "ad14f0063122492a868bfbb7938f965a": 1,
         "33b6d60c27644fc2831452163533f929": 1,
         "d186ad540901431a9742b1e937ed208f": 3,
-        "93e8035a86ca4b4b963be991ecd30def": 1,
-        "bf0b42e94b7c4179a13a0b9a4ac8e42b": 4,
-        "c413213bd5844768ac71f167db384dab": 1
+        "c413213bd5844768ac71f167db384dab": 1,
+        "b5bbad6ce4494108a20fda9725818e06": 3,
+        "bcba89638ef34f9eb3756c0f3793560b": 1,
+        "223cad8179514bb78b8032c4802cd7ce": 1,
+        "5c3e20a63d874b0783d87b60b2ec0d74": 4,
+        "7e255ab3c9624493a6d84979624cc36a": 3,
+        "44ff2b9542d043dd8384da5c55a1ae78": 3,
+        "c87818e3e5c04459ac3f1972134bbbf0": 2
       },
       "BOM": [
         [
@@ -54,17 +54,45 @@
           }
         ],
         [
+          "100K",
+          4,
+          "RNF14",
+          "R1,R2,R6,R8",
+          {
+            "BOM_Manufacturer": "Stackpole Electronics Inc",
+            "BOM_Manufacturer Part": "RNF14FTD100K",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "RNF14FTD100KCT-ND",
+            "puuid": "d9ec11a524cc4cac9c4e621d905be0de",
+            "uuid": "5c3e20a63d874b0783d87b60b2ec0d74"
+          }
+        ],
+        [
           "LDR",
           1,
           "2 PIN",
           "S1",
           {
-            "BOM_Manufacturer Part": "GL5528",
-            "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C125627",
-            "BOM_Manufacturer": "Senba",
+            "BOM_Manufacturer Part": "NSL-6112",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "NSL-6112-ND",
+            "BOM_Manufacturer": "Advanced Photonix",
             "puuid": "509a05ef2e964ed9a4248db6deac6645",
             "uuid": "7afd1c549ad243c682d30ba970d6e45e"
+          }
+        ],
+        [
+          "249",
+          3,
+          "RNF14",
+          "R3,R9,R7",
+          {
+            "BOM_Manufacturer": "Stackpole Electronics Inc",
+            "BOM_Manufacturer Part": "RNF14FTD249R",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "RNF14FTD249RCT-ND",
+            "puuid": "d9ec11a524cc4cac9c4e621d905be0de",
+            "uuid": "7e255ab3c9624493a6d84979624cc36a"
           }
         ],
         [
@@ -93,17 +121,31 @@
           }
         ],
         [
+          "10K",
+          3,
+          "RNF14",
+          "R5,R10,R4",
+          {
+            "BOM_Manufacturer": "Stackpole Electronics Inc",
+            "BOM_Manufacturer Part": "RNF14FTD10K0",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "RNF14FTD10K0CT-ND",
+            "puuid": "d9ec11a524cc4cac9c4e621d905be0de",
+            "uuid": "44ff2b9542d043dd8384da5c55a1ae78"
+          }
+        ],
+        [
           "10uF",
           1,
-          "CAP-TH_L5.9-W4.2-P5.08-D0.5",
+          "F26",
           "C1",
           {
-            "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C454406",
-            "BOM_Manufacturer": "火炬",
-            "BOM_Manufacturer Part": "CT4G-1210-X5R-50V-10μF-K",
-            "puuid": "3bc313fd3d674495a915694beff6c6b2",
-            "uuid": "93e8035a86ca4b4b963be991ecd30def"
+            "BOM_Manufacturer": "TDK Corporation",
+            "BOM_Manufacturer Part": "FG26X7R1E106KRT06",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "445-173437-1-ND",
+            "puuid": "d7ff8e39bee0494395187122cb768046",
+            "uuid": "223cad8179514bb78b8032c4802cd7ce"
           }
         ],
         [
@@ -121,17 +163,45 @@
           }
         ],
         [
-          "100K",
-          4,
-          "RES-TH_BD4.5-L11.0-P15.00-D0.7",
-          "R1,R6,R2,R8",
+          "IPP039N04L",
+          3,
+          "TO-220-3",
+          "Q1,Q5,Q3",
           {
-            "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C433622",
-            "BOM_Manufacturer": "TyoHM",
-            "BOM_Manufacturer Part": "RN 2WS 100K F T/B A1",
-            "puuid": "86743c5ba9ba4adc92807ca486640f95",
-            "uuid": "bf0b42e94b7c4179a13a0b9a4ac8e42b"
+            "BOM_Manufacturer": "Infineon Technologies",
+            "BOM_Manufacturer Part": "IPP039N04LGXKSA1",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "IPP039N04LGXKSA1-ND",
+            "puuid": "11454152a6dc452387358740b1a2d90d",
+            "uuid": "b5bbad6ce4494108a20fda9725818e06"
+          }
+        ],
+        [
+          "SQP50P03-07",
+          1,
+          "TO-220-3",
+          "Q2",
+          {
+            "BOM_Manufacturer": "Vishay Siliconix",
+            "BOM_Manufacturer Part": "SQP50P03-07_GE3",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "SQP50P03-07_GE3-ND",
+            "puuid": "11454152a6dc452387358740b1a2d90d",
+            "uuid": "bcba89638ef34f9eb3756c0f3793560b"
+          }
+        ],
+        [
+          "95SQ015",
+          2,
+          "DO-201AD",
+          "D3,D4",
+          {
+            "BOM_Manufacturer": "SMC Diode Solutions",
+            "BOM_Manufacturer Part": "95SQ015",
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "1655-1922-1-ND",
+            "puuid": "fcb5cf5550f940c8a70de7e92c11bd47",
+            "uuid": "c87818e3e5c04459ac3f1972134bbbf0"
           }
         ],
         [
@@ -146,38 +216,10 @@
           }
         ],
         [
-          "1N5821",
-          2,
-          "DO-201AD_BD5.3-L8.4-P12.50-D1.4-RD",
-          "D4,D3",
-          {
-            "BOM_Supplier": "LCSC",
-            "BOM_Manufacturer": "ON",
-            "BOM_Manufacturer Part": "1N5821RLG",
-            "BOM_Supplier Part": "C9119",
-            "puuid": "ba4a753162c8448790556d107c1b6560",
-            "uuid": "c99793551ddc493fe44ee4790dc56864"
-          }
-        ],
-        [
-          "220",
-          3,
-          "RES-TH_BD3.3-L9.0-P13.00-D0.6",
-          "R3,R9,R7",
-          {
-            "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C385596",
-            "BOM_Manufacturer": "TyoHM",
-            "BOM_Manufacturer Part": "RN1/2W220ΩFT/BA1",
-            "puuid": "987b1ed46f1743c9a1f55a2893a33c05",
-            "uuid": "d0dc5e8f7920458dbababb98afd96517"
-          }
-        ],
-        [
           "Button",
           3,
           "2 PIN",
-          "SW2,SW1,SW3",
+          "SW2,SW3,SW1",
           {
             "BOM_Manufacturer Part": "",
             "BOM_Supplier Part": "",
@@ -198,55 +240,13 @@
             "puuid": "f07c6673549f41cfb342a159f58b1b48",
             "uuid": "d3312fa78c9c45c7a0baa313b1f73174"
           }
-        ],
-        [
-          "10K",
-          3,
-          "RES-TH_BD2.3-L6.5-P10.50-D0.5",
-          "R10,R5,R4",
-          {
-            "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C119347",
-            "BOM_Manufacturer": "Chian Chia Elec",
-            "BOM_Manufacturer Part": "-",
-            "puuid": "9ea59130ae074fa3abe27de8cbf71d91",
-            "uuid": "e9f71c2386074942b7cef259c39e047b"
-          }
-        ],
-        [
-          "IRL3705N",
-          3,
-          "TO-220-3_L10.0-W4.5-P2.54-T",
-          "Q4,Q3,Q1",
-          {
-            "BOM_Supplier": "LCSC",
-            "BOM_Manufacturer": "IR",
-            "BOM_Manufacturer Part": "IRL3705NPBF",
-            "BOM_Supplier Part": "C2667",
-            "puuid": "fb8b10620b5a459d9b03fd14987346f4",
-            "uuid": "f336323cc9644812822f32b4040fa02f"
-          }
-        ],
-        [
-          "NDP6020P",
-          1,
-          "TO-220-3_L10.0-W4.5-P2.54-T",
-          "Q2",
-          {
-            "BOM_Supplier": "LCSC",
-            "BOM_Supplier Part": "C68561",
-            "BOM_Manufacturer": "ON Semicon",
-            "BOM_Manufacturer Part": "NDP6020P",
-            "puuid": "fb8b10620b5a459d9b03fd14987346f4",
-            "uuid": "fae120f7435b4107aefda4628c7f698f"
-          }
         ]
       ],
-      "updateTime": 1588110899,
+      "updateTime": 1588547755,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-04-29 09:54:59"
+      "updated_at": "2020-05-04 11:15:55"
     },
     {
       "uuid": "34514fbac4e2f52d8464aa5bbd1560c6",
@@ -309,5 +309,5 @@
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588110899997
+  "schfilemtime": 1588547755845
 }
