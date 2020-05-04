@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-05-04 11:15:55",
+  "updated_at": "2020-05-04 12:35:53",
   "stick": "",
   "documents": [
     {
@@ -260,21 +260,20 @@
       "components": {
         "f07c6673549f41cfb342a159f58b1b48": 4,
         "509a05ef2e964ed9a4248db6deac6645": 4,
-        "ca138cd368cd4dc289ea969a446fb4a4": 1,
-        "3bc313fd3d674495a915694beff6c6b2": 1,
+        "fcb5cf5550f940c8a70de7e92c11bd47": 2,
+        "11454152a6dc452387358740b1a2d90d": 4,
         "2bdb16cbf9314400b61ad7423d68e181": 1,
-        "86743c5ba9ba4adc92807ca486640f95": 4,
-        "ba4a753162c8448790556d107c1b6560": 2,
-        "987b1ed46f1743c9a1f55a2893a33c05": 3,
-        "9ea59130ae074fa3abe27de8cbf71d91": 3,
-        "fb8b10620b5a459d9b03fd14987346f4": 4
+        "d7ff8e39bee0494395187122cb768046": 1,
+        "d9ec11a524cc4cac9c4e621d905be0de": 10,
+        "17524975476e4b0e802837ba038b33b8": 1,
+        "ca138cd368cd4dc289ea969a446fb4a4": 1
       },
       "BOM": [],
-      "updateTime": 1588398725,
+      "updateTime": 1588552553,
       "createTime": 1588053009,
       "histories": [],
       "created_at": "2020-04-28 17:50:09",
-      "updated_at": "2020-05-02 17:52:05"
+      "updated_at": "2020-05-04 12:35:53"
     },
     {
       "uuid": "ce7c623e1cab4ddde95aa68dc9821706",
