@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-05-04 13:27:03",
+  "updated_at": "2020-05-04 14:45:43",
   "stick": "",
   "documents": [
     {
@@ -249,32 +249,6 @@
       "updated_at": "2020-05-04 11:15:55"
     },
     {
-      "uuid": "34514fbac4e2f52d8464aa5bbd1560c6",
-      "puuid": "7449923668de4b9c4b7197d633bf3c44",
-      "title": "PCB",
-      "filename": "PCB.json",
-      "description": "",
-      "docType": "3",
-      "master": "",
-      "thumb": "/images/thumb-default.png",
-      "components": {
-        "f07c6673549f41cfb342a159f58b1b48": 4,
-        "509a05ef2e964ed9a4248db6deac6645": 4,
-        "fcb5cf5550f940c8a70de7e92c11bd47": 2,
-        "11454152a6dc452387358740b1a2d90d": 4,
-        "2bdb16cbf9314400b61ad7423d68e181": 1,
-        "d7ff8e39bee0494395187122cb768046": 1,
-        "d9ec11a524cc4cac9c4e621d905be0de": 10,
-        "ca138cd368cd4dc289ea969a446fb4a4": 1
-      },
-      "BOM": [],
-      "updateTime": 1588555623,
-      "createTime": 1588053009,
-      "histories": [],
-      "created_at": "2020-04-28 17:50:09",
-      "updated_at": "2020-05-04 13:27:03"
-    },
-    {
       "uuid": "ce7c623e1cab4ddde95aa68dc9821706",
       "puuid": "7449923668de4b9c4b7197d633bf3c44",
       "title": "PCB(Fabrication)",
@@ -301,6 +275,32 @@
       "histories": [],
       "created_at": "2020-04-29 22:31:55",
       "updated_at": "2020-04-29 22:40:57"
+    },
+    {
+      "uuid": "d20a0268e875eec2399f4c663b85cfdd",
+      "puuid": "7449923668de4b9c4b7197d633bf3c44",
+      "title": "PCB",
+      "filename": "PCB.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f07c6673549f41cfb342a159f58b1b48": 4,
+        "509a05ef2e964ed9a4248db6deac6645": 4,
+        "fcb5cf5550f940c8a70de7e92c11bd47": 2,
+        "11454152a6dc452387358740b1a2d90d": 4,
+        "2bdb16cbf9314400b61ad7423d68e181": 1,
+        "d7ff8e39bee0494395187122cb768046": 1,
+        "d9ec11a524cc4cac9c4e621d905be0de": 10,
+        "ca138cd368cd4dc289ea969a446fb4a4": 1
+      },
+      "BOM": [],
+      "updateTime": 1588560343,
+      "createTime": 1588560336,
+      "histories": [],
+      "created_at": "2020-05-04 14:45:36",
+      "updated_at": "2020-05-04 14:45:43"
     }
   ],
   "sort": [],
