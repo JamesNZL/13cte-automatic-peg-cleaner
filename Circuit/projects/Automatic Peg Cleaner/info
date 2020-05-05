@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-05-04 20:17:13",
+  "updated_at": "2020-05-05 12:45:23",
   "stick": "",
   "documents": [
     {
@@ -166,7 +166,7 @@
           "IPP039N04L",
           3,
           "TO-220-3",
-          "Q1,Q5,Q3",
+          "Q1,Q3,Q4",
           {
             "BOM_Manufacturer": "Infineon Technologies",
             "BOM_Manufacturer Part": "IPP039N04LGXKSA1",
@@ -242,11 +242,11 @@
           }
         ]
       ],
-      "updateTime": 1588547727,
+      "updateTime": 1588639497,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-05-04 11:15:27"
+      "updated_at": "2020-05-05 12:44:57"
     },
     {
       "uuid": "34514fbac4e2f52d8464aa5bbd1560c6",
@@ -324,16 +324,16 @@
         "fcb5cf5550f940c8a70de7e92c11bd47": 2
       },
       "BOM": [],
-      "updateTime": 1588580233,
+      "updateTime": 1588639523,
       "createTime": 1588573917,
       "histories": [],
       "created_at": "2020-05-04 18:31:57",
-      "updated_at": "2020-05-04 20:17:13"
+      "updated_at": "2020-05-05 12:45:23"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588547727082
+  "schfilemtime": 1588639497882
 }
