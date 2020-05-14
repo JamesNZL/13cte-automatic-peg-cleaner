@@ -4,7 +4,7 @@ unsigned long lastPrint = 0;
 bool waterDanger = false;
 const int waterPin = A0;
 const int ledPin = 13;
-const int minimumValue = 250;
+const int minimumValue = 200;
 const unsigned long printDelay = 500;
 
 void setup()
