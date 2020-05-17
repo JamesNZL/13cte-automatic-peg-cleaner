@@ -1,13 +1,13 @@
 const int mosfetPin = 2;
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(mosfetPin, OUTPUT);
-  digitalWrite(mosfetPin, HIGH);  
+	// put your setup code here, to run once:
+	pinMode(mosfetPin, OUTPUT);
+	digitalWrite(mosfetPin, HIGH);  
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  delay(5000);
-  digitalWrite(mosfetPin, LOW);
+	// put your main code here, to run repeatedly:
+	delay(5000);
+	digitalWrite(mosfetPin, LOW);
 }

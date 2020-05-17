@@ -11,48 +11,48 @@ const int testIterations = 5;                               // number of reading
 const int maximumValue = 1023;                              // maximum reading possible from LDR, therefore maximum reading when laser is 'armed'
 
 void setup() {
-  pinMode(sensorPin, INPUT);                                // defines (sensorPin) as an input pin
-  pinMode(laserPin, OUTPUT);                                // defines (laserPin) as an output pin
-  pinMode(redPin, OUTPUT);                                  // defines (redPin) as an output pin
-  pinMode(greenPin, OUTPUT);                                // defines (greenPin) as an output pin
-  pinMode(bluePin, OUTPUT);                                 // defines (bluePin) as an output pin
-  
-  Serial.begin(9600);                                       // initialise serial monitor at 9600 baud
+	pinMode(sensorPin, INPUT);                                // defines (sensorPin) as an input pin
+	pinMode(laserPin, OUTPUT);                                // defines (laserPin) as an output pin
+	pinMode(redPin, OUTPUT);                                  // defines (redPin) as an output pin
+	pinMode(greenPin, OUTPUT);                                // defines (greenPin) as an output pin
+	pinMode(bluePin, OUTPUT);                                 // defines (bluePin) as an output pin
+	
+	Serial.begin(9600);                                       // initialise serial monitor at 9600 baud
 
-  digitalWrite(laserPin, LOW);                              // disengage laser for preliminary sensor reading
+	digitalWrite(laserPin, LOW);                              // disengage laser for preliminary sensor reading
 
-  for (int i = 0; i <= (testIterations - 1); i++) {         // perform the following actions (testIterations) times
-    testTotal += analogRead(sensorValue);                   // add current analogue reading from LDR to existing (testTotal) value
-  }
+	for (int i = 0; i <= (testIterations - 1); i++) {         // perform the following actions (testIterations) times
+		testTotal += analogRead(sensorValue);                   // add current analogue reading from LDR to existing (testTotal) value
+	}
 
-  digitalWrite(laserPin, HIGH);                             // engage laser tripwire
+	digitalWrite(laserPin, HIGH);                             // engage laser tripwire
 
-  disarmedValue = testTotal / testIterations;               // set (disarmedValue) equal to average of the (testIterations) tests
-  triggerAt = maximumValue - (disarmedValue / 2);           // set (triggerAt) to mid point between 'armed' and 'disarmed' / 'triggered'
+	disarmedValue = testTotal / testIterations;               // set (disarmedValue) equal to average of the (testIterations) tests
+	triggerAt = maximumValue - (disarmedValue / 2);           // set (triggerAt) to mid point between 'armed' and 'disarmed' / 'triggered'
 
-  sensorValue = analogRead(sensorPin);                      // read current value from LDR
+	sensorValue = analogRead(sensorPin);                      // read current value from LDR
 
-  if (sensorValue < triggerAt) {                            // if analogue reading from LDR indicates the tripwire is disarmed, do the following
-    digitalWrite(redPin, HIGH);                             // turn red LED on
-    digitalWrite(greenPin, LOW);                            // turn green LED off
-    digitalWrite(bluePin, LOW);                             // turn blue LED off
-  }
-  
-  else if (sensorValue > triggerAt) {                       // if analogue reading from LDR indicates the tripwire is armed, do the following
-    digitalWrite(redPin, LOW);                              // turn red LED off
-    digitalWrite(greenPin, HIGH);                           // turn green LED on
-    digitalWrite(bluePin, LOW);                             // turn blue LED off
-  }
+	if (sensorValue < triggerAt) {                            // if analogue reading from LDR indicates the tripwire is disarmed, do the following
+		digitalWrite(redPin, HIGH);                             // turn red LED on
+		digitalWrite(greenPin, LOW);                            // turn green LED off
+		digitalWrite(bluePin, LOW);                             // turn blue LED off
+	}
+	
+	else if (sensorValue > triggerAt) {                       // if analogue reading from LDR indicates the tripwire is armed, do the following
+		digitalWrite(redPin, LOW);                              // turn red LED off
+		digitalWrite(greenPin, HIGH);                           // turn green LED on
+		digitalWrite(bluePin, LOW);                             // turn blue LED off
+	}
 }
 
 void loop() {
-  sensorValue = analogRead(sensorPin);                      // update (sensorValue) to analogue reading from LDR now that the tripwire is armed
-  
-  while (sensorValue >= triggerAt) {                        // until the analogue reading has dropped below 'activation' threshold, do the following
-    sensorValue = analogRead(sensorPin);                    // update (sensorValue)
-    Serial.println(sensorValue);                            // print current value to serial monitor (for debugging)
-  }
+	sensorValue = analogRead(sensorPin);                      // update (sensorValue) to analogue reading from LDR now that the tripwire is armed
+	
+	while (sensorValue >= triggerAt) {                        // until the analogue reading has dropped below 'activation' threshold, do the following
+		sensorValue = analogRead(sensorPin);                    // update (sensorValue)
+		Serial.println(sensorValue);                            // print current value to serial monitor (for debugging)
+	}
 
-  Serial.print("Triggered @ ");                             // if tripwire is broken, print 'Triggered' to serial monitor
-  Serial.println(sensorValue);
+	Serial.print("Triggered @ ");                             // if tripwire is broken, print 'Triggered' to serial monitor
+	Serial.println(sensorValue);
 }
