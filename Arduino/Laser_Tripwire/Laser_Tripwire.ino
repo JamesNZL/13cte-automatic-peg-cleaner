@@ -25,12 +25,10 @@ void setup() {
     testTotal += analogRead(sensorValue);                   // add current analogue reading from LDR to existing (testTotal) value
   }
 
-  disarmedValue = testTotal / testIterations;               // set (disarmedValue) equal to average of the (testIterations) tests
-  triggerAt = maximumValue - (disarmedValue / 2);           // set (triggerAt) to mid point between 'armed' and 'disarmed' / 'triggered'
-
   digitalWrite(laserPin, HIGH);                             // engage laser tripwire
 
-  delay(250);                                               // pause to ensure laser is engaged prior to below reading
+  disarmedValue = testTotal / testIterations;               // set (disarmedValue) equal to average of the (testIterations) tests
+  triggerAt = maximumValue - (disarmedValue / 2);           // set (triggerAt) to mid point between 'armed' and 'disarmed' / 'triggered'
 
   sensorValue = analogRead(sensorPin);                      // read current value from LDR
 
