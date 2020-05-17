@@ -1,14 +1,13 @@
-int sensorValue = 0;                                        // variable for current analogue reading from LDR
-int disarmedValue = 0;                                      // variable that records the analogue reading from LDR when laser is disengaged ('disarmed' value)
-int triggerAt = 0;                                          // variable for what LDR reading to 'trigger' tripwire at (Let 'disarmed' value be 500, 'armed' value be max of 1000, triggerAt would be 1000 - 500/2 = 1000 - 250 = 750)
-int testTotal = 0;                                          // iterative variable to record total of (testIterations) readings from LDR when initialising
+int sensorValue;                                            // variable for current analogue reading from LDR
+int disarmedValue;                                          // variable that records the analogue reading from LDR when laser is disengaged ('disarmed' value)
+int triggerAt;                                              // variable for what LDR reading to 'trigger' tripwire at (Let 'disarmed' value be 500, 'armed' value be max of 1000, triggerAt would be 1000 - 500/2 = 1000 - 250 = 750)
+int testTotal;                                              // iterative variable to record total of (testIterations) readings from LDR when initialising
 const int sensorPin = A0;                                   // LDR 'signal' pin
 const int laserPin = 12;                                    // laser pin
 const int redPin = 9;                                       // rgb module red pin
 const int greenPin = 10;                                    // rgb module blue pin
 const int bluePin = 11;                                     // rgb module blue pin
 const int testIterations = 5;                               // number of readings to perform when initialising
-const int armedValue = 1000;                                // reasonable reading for when tripwire is engaged, as (maximumValue) is infrequently reached
 const int maximumValue = 1023;                              // maximum reading possible from LDR, therefore maximum reading when laser is 'armed'
 
 void setup() {
@@ -33,13 +32,15 @@ void setup() {
 
   delay(250);                                               // pause to ensure laser is engaged prior to below reading
 
-  if (analogRead(sensorPin) < armedValue) {                 // if analogue reading from LDR indicates the tripwire is disarmed, do the following
+  sensorValue = analogRead(sensorPin);                      // read current value from LDR
+
+  if (sensorValue < triggerAt) {                            // if analogue reading from LDR indicates the tripwire is disarmed, do the following
     digitalWrite(redPin, HIGH);                             // turn red LED on
     digitalWrite(greenPin, LOW);                            // turn green LED off
     digitalWrite(bluePin, LOW);                             // turn blue LED off
   }
   
-  else if (analogRead(sensorPin) > armedValue) {            // if analogue reading from LDR indicates the tripwire is disarmed, do the following
+  else if (sensorValue > triggerAt) {                       // if analogue reading from LDR indicates the tripwire is armed, do the following
     digitalWrite(redPin, LOW);                              // turn red LED off
     digitalWrite(greenPin, HIGH);                           // turn green LED on
     digitalWrite(bluePin, LOW);                             // turn blue LED off
