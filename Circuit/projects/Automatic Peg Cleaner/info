@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-05-10 22:48:35",
+  "updated_at": "2020-05-19 18:57:30",
   "stick": "",
   "documents": [
     {
@@ -29,7 +29,7 @@
         "5c3e20a63d874b0783d87b60b2ec0d74": 4,
         "7e255ab3c9624493a6d84979624cc36a": 3,
         "44ff2b9542d043dd8384da5c55a1ae78": 3,
-        "c87818e3e5c04459ac3f1972134bbbf0": 2
+        "f6ef388eb62b422ab248b72408e38120": 2
       },
       "BOM": [
         [
@@ -137,7 +137,7 @@
         [
           "10uF",
           1,
-          "F26",
+          "FG26",
           "C1",
           {
             "BOM_Manufacturer": "TDK Corporation",
@@ -166,7 +166,7 @@
           "IPP039N04L",
           3,
           "TO-220-3",
-          "Q1,Q3,Q4",
+          "Q1,Q4,Q3",
           {
             "BOM_Manufacturer": "Infineon Technologies",
             "BOM_Manufacturer Part": "IPP039N04LGXKSA1",
@@ -188,20 +188,6 @@
             "BOM_Supplier Part": "SQP50P03-07_GE3-ND",
             "puuid": "11454152a6dc452387358740b1a2d90d",
             "uuid": "bcba89638ef34f9eb3756c0f3793560b"
-          }
-        ],
-        [
-          "95SQ015",
-          2,
-          "DO-201AD",
-          "D3,D4",
-          {
-            "BOM_Manufacturer": "SMC Diode Solutions",
-            "BOM_Manufacturer Part": "95SQ015",
-            "BOM_Supplier": "Digi-Key",
-            "BOM_Supplier Part": "1655-1922-1-ND",
-            "puuid": "fcb5cf5550f940c8a70de7e92c11bd47",
-            "uuid": "c87818e3e5c04459ac3f1972134bbbf0"
           }
         ],
         [
@@ -240,13 +226,27 @@
             "puuid": "f07c6673549f41cfb342a159f58b1b48",
             "uuid": "d3312fa78c9c45c7a0baa313b1f73174"
           }
+        ],
+        [
+          "1N5819G",
+          2,
+          "DO-41",
+          "D3,D4",
+          {
+            "BOM_Supplier": "Digi-Key",
+            "BOM_Supplier Part": "1N5819GOS-ND",
+            "BOM_Manufacturer": "ON Semiconductor",
+            "BOM_Manufacturer Part": "1N5819G",
+            "puuid": "a310fb6f873749d088d802e008e009fd",
+            "uuid": "f6ef388eb62b422ab248b72408e38120"
+          }
         ]
       ],
-      "updateTime": 1588639381,
+      "updateTime": 1589869841,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-05-05 12:43:01"
+      "updated_at": "2020-05-19 18:30:41"
     },
     {
       "uuid": "ce7c623e1cab4ddde95aa68dc9821706",
@@ -288,24 +288,24 @@
       "components": {
         "f07c6673549f41cfb342a159f58b1b48": 4,
         "509a05ef2e964ed9a4248db6deac6645": 4,
-        "fcb5cf5550f940c8a70de7e92c11bd47": 2,
         "11454152a6dc452387358740b1a2d90d": 4,
         "2bdb16cbf9314400b61ad7423d68e181": 1,
         "d7ff8e39bee0494395187122cb768046": 1,
         "ca138cd368cd4dc289ea969a446fb4a4": 1,
-        "d9ec11a524cc4cac9c4e621d905be0de": 10
+        "d9ec11a524cc4cac9c4e621d905be0de": 10,
+        "a310fb6f873749d088d802e008e009fd": 2
       },
       "BOM": [],
-      "updateTime": 1589107715,
+      "updateTime": 1589871450,
       "createTime": 1588560336,
       "histories": [],
       "created_at": "2020-05-04 14:45:36",
-      "updated_at": "2020-05-10 22:48:35"
+      "updated_at": "2020-05-19 18:57:30"
     }
   ],
   "sort": [],
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1588639381984
+  "schfilemtime": 1589869841594
 }
