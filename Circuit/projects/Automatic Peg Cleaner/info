@@ -4,7 +4,7 @@
   "name": "Automatic Peg Cleaner",
   "content": "",
   "created_at": "2020-04-27 12:50:29",
-  "updated_at": "2020-06-05 19:23:57",
+  "updated_at": "2020-06-05 20:04:03",
   "stick": "",
   "documents": [
     {
@@ -28,7 +28,7 @@
         "223cad8179514bb78b8032c4802cd7ce": 1,
         "5c3e20a63d874b0783d87b60b2ec0d74": 4,
         "7e255ab3c9624493a6d84979624cc36a": 3,
-        "44ff2b9542d043dd8384da5c55a1ae78": 3,
+        "44ff2b9542d043dd8384da5c55a1ae78": 5,
         "f6ef388eb62b422ab248b72408e38120": 2
       },
       "BOM": [
@@ -57,7 +57,7 @@
           "100K",
           4,
           "RNF14",
-          "R1,R2,R6,R8",
+          "R2,R1,R8,R10",
           {
             "BOM_Manufacturer": "Stackpole Electronics Inc",
             "BOM_Manufacturer Part": "RNF14FTD100K",
@@ -85,7 +85,7 @@
           "249",
           3,
           "RNF14",
-          "R3,R9,R7",
+          "R3,R11,R9",
           {
             "BOM_Manufacturer": "Stackpole Electronics Inc",
             "BOM_Manufacturer Part": "RNF14FTD249R",
@@ -122,9 +122,9 @@
         ],
         [
           "10K",
-          3,
+          5,
           "RNF14",
-          "R5,R10,R4",
+          "R12,R5,R4,R7,R6",
           {
             "BOM_Manufacturer": "Stackpole Electronics Inc",
             "BOM_Manufacturer Part": "RNF14FTD10K0",
@@ -166,7 +166,7 @@
           "IPP039N04L",
           3,
           "TO-220-3",
-          "Q1,Q4,Q3",
+          "Q3,Q4,Q1",
           {
             "BOM_Manufacturer": "Infineon Technologies",
             "BOM_Manufacturer Part": "IPP039N04LGXKSA1",
@@ -205,7 +205,7 @@
           "Button",
           3,
           "2 PIN",
-          "SW2,SW3,SW1",
+          "SW1,SW3,SW2",
           {
             "BOM_Manufacturer Part": "",
             "BOM_Supplier Part": "",
@@ -231,7 +231,7 @@
           "1N5819G",
           2,
           "DO-41",
-          "D3,D4",
+          "D4,D3",
           {
             "BOM_Supplier": "Digi-Key",
             "BOM_Supplier Part": "1N5819GOS-ND",
@@ -242,11 +242,11 @@
           }
         ]
       ],
-      "updateTime": 1590616390,
+      "updateTime": 1591344243,
       "createTime": 1587948661,
       "histories": [],
       "created_at": "2020-04-27 12:51:01",
-      "updated_at": "2020-05-28 09:53:10"
+      "updated_at": "2020-06-05 20:04:03"
     },
     {
       "uuid": "d20a0268e875eec2399f4c663b85cfdd",
@@ -279,5 +279,5 @@
   "title": "Automatic Peg Cleaner",
   "foldername": "Automatic Peg Cleaner",
   "schfilename": "Automatic Peg Cleaner.json",
-  "schfilemtime": 1590616390784
+  "schfilemtime": 1591344243109
 }
