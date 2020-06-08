@@ -15,6 +15,12 @@ void loop()
 {
 	batteryValue = analogRead(batteryPin) * readVoltage;
 
+	if (batteryValue < batteryCritical) {
+		Serial.print("Critical @ ");
+	} else if (batteryValue < batteryLow) {
+		Serial.print("Low @");
+	}
+
 	Serial.println(batteryValue);
 
 	delay(100);
