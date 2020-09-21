@@ -180,9 +180,9 @@ void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 void indicatorAlert()
 {
 	for (int i = 0; i < 5; i++) {
-		indicatorAlert(HIGH, LOW, LOW);
+		indicatorControl(HIGH, LOW, LOW);
 		delay(alertDelay);
-		indicatorAlert(LOW, LOW, LOW);
+		indicatorControl(LOW, LOW, LOW);
 		delay(alertDelay);
 	}
 }
