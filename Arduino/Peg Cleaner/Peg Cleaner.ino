@@ -1,4 +1,5 @@
 float batteryValue;
+
 int waterValue;
 int ldrValue;
 int offInput;
@@ -7,8 +8,10 @@ int disarmedValue;
 int triggerAt;
 int testTotal;
 int waterMinimum = 200;
+
 const float batteryLow = 3.9;
 const float batteryCritical = 3.7;
+
 const int batteryPin = A0;
 const int waterPin = A1;
 const int ldrPin = A2;
@@ -24,9 +27,11 @@ const int laserPin = 12;
 const int testIterations = 5;
 const int maximumValue = 1023;
 const int alertDelay = 500;
+
 bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
+
 unsigned long currentTime;
 unsigned long lastAction = 0;
 unsigned long terminateTime = 180000;
@@ -38,6 +43,7 @@ void setup()
 	pinMode(ldrPin, INPUT);
 	pinMode(offButton, INPUT);
 	pinMode(drainButton, INPUT);
+
 	pinMode(powerGate, OUTPUT);
 	pinMode(jetGate, OUTPUT);
 	pinMode(powerGate, OUTPUT);
@@ -58,8 +64,10 @@ void setup()
 void loop() 
 {
 	currentTime = millis();
+
 	ldrValue = analogRead(ldrPin);
 	waterValue = analogRead(waterPin);
+
 	drainInput = digitalRead(drainButton);
 	offInput = digitalRead(offButton);
 	
@@ -85,6 +93,7 @@ void batteryCheck()
 
 	else if (batteryValue < batteryCritical) {
 		indicatorAlert();
+
 		digitalWrite(powerGate, LOW);
 	}
 }
@@ -109,6 +118,7 @@ void tripwireCheck()
 
 	while (ldrValue < triggerAt) {
 		ldrValue = analogRead(ldrPin);
+
 		indicatorAlert();
 	}
 	
@@ -121,9 +131,13 @@ void tripwireEngage()
 {
 	if (ldrValue >= triggerAt) {
 		jetsEngaged = timeOut(jetsEngaged, false);
+		
 		digitalWrite(jetGate, HIGH);
-	} else {
+	} 
+
+	else {
 		jetsEngaged = timeOut(jetsEngaged, true);
+		
 		digitalWrite(jetGate, LOW);
 	}
 }
@@ -139,10 +153,14 @@ void drainEngage()
 
 		if (drainInput == HIGH) {
 			indicatorControl(LOW, LOW, HIGH);
-		} else {
+		} 
+
+		else {
 			indicatorControl(HIGH, LOW, LOW);
 		}
-	} else {
+	} 
+
+	else {
 		waterDanger = timeOut(waterDanger, true);
 		buttonPressed = timeOut(buttonPressed, true);
 
