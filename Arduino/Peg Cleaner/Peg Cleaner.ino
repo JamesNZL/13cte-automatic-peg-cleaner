@@ -88,29 +88,21 @@ void loop()
 		digitalWrite(jetGate, LOW);
 	}
 
-	if (waterValue > waterMinimum) {
+	if (waterValue > waterMinimum || drainInput == HIGH) {
 		waterDanger = timeOut(waterDanger, false);
-
-		digitalWrite(drainGate, HIGH);
-
-		indicatorControl(HIGH, LOW, LOW);
-	} else {
-		waterDanger = timeOut(waterDanger, true);
-
-		digitalWrite(drainGate, LOW);
-
-		indicatorControl(LOW, HIGH, LOW);
-	}
-
-	if (drainInput == HIGH) {
 		buttonPressed = timeOut(buttonPressed, false);
 
 		digitalWrite(drainGate, HIGH);
 
-		indicatorControl(LOW, LOW, HIGH);
+		if (drainInput == HIGH) {
+			indicatorControl(LOW, LOW, HIGH);
+		} else {
+			indicatorControl(HIGH, LOW, LOW);
+		}
 	} else {
+		waterDanger = timeOut(waterDanger, true);
 		buttonPressed = timeOut(buttonPressed, true);
-		
+
 		digitalWrite(drainGate, LOW);
 
 		indicatorControl(LOW, HIGH, LOW);
