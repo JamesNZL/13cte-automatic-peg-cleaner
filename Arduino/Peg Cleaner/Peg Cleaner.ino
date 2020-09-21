@@ -76,68 +76,45 @@ void loop()
 {
 	currentTime = millis();
 	ldrValue = analogRead(ldrPin);
+	waterValue = analogRead(waterPin);
+	drainInput = digitalRead(drainButton);
+	offInput = digitalRead(offButton);
 	
-	if (ldrValue >= triggerAt) {
-		if (jetsEngaged == false) {
-			lastAction = currentTime;
-		}
-
-		jetsEngaged = true;
+	if (ldrValue >= triggerAt && waterValue < waterMinimum && drainInput == LOW) {
+		jetsEngaged = timeOut(jetsEngaged, false);
 		digitalWrite(jetGate, HIGH);
 	} else {
-		if (jetsEngaged == true) {
-			lastAction = currentTime;
-		}
-
-		jetsEngaged = false;
+		jetsEngaged = timeOut(jetsEngaged, true);
 		digitalWrite(jetGate, LOW);
 	}
 
-	waterValue = analogRead(waterPin);
-
 	if (waterValue > waterMinimum) {
-		if (waterDanger == false) {
-			lastAction = currentTime;
-		}
+		waterDanger = timeOut(waterDanger, false);
 
-		waterDanger = true;
 		digitalWrite(drainGate, HIGH);
 
 		indicatorControl(HIGH, LOW, LOW);
 	} else {
-		if (waterDanger == true) {
-			lastAction = currentTime;
-		}
+		waterDanger = timeOut(waterDanger, true);
 
-		waterDanger = false;
 		digitalWrite(drainGate, LOW);
 
 		indicatorControl(LOW, HIGH, LOW);
 	}
 
-	drainInput = digitalRead(drainButton);
-
 	if (drainInput == HIGH) {
-		if (buttonPressed == false) {
-			lastAction = currentTime;
-		}
+		buttonPressed = timeOut(buttonPressed, false);
 
-		buttonPressed = true;
 		digitalWrite(drainGate, HIGH);
 
 		indicatorControl(LOW, LOW, HIGH);
 	} else {
-		if (buttonPressed == true) {
-			lastAction = currentTime;
-		}
-
-		buttonPressed = false;
+		buttonPressed = timeOut(buttonPressed, true);
+		
 		digitalWrite(drainGate, LOW);
 
 		indicatorControl(LOW, HIGH, LOW);
 	}
-
-	offInput = digitalRead(offButton);
 
 	if (offInput == HIGH) {
 		shutDown();
@@ -163,6 +140,15 @@ void indicatorAlert()
 		indicatorAlert(LOW, LOW, LOW);
 		delay(alertDelay);
 	}
+}
+
+void timeOut(bool previousState, bool testFor)
+{
+	if (previousState == testFor) {
+		lastAction = currentTime;
+	}
+
+	return !testFor;
 }
 
 void shutDown()
