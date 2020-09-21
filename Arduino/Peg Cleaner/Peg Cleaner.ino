@@ -63,8 +63,7 @@ void setup()
 	ldrValue = analogRead(ldrPin);
 
 	if (ldrValue < triggerAt) {
-		indicatorControl(HIGH, LOW, LOW);
-		delay(alertDelay);
+		indicatorAlert();
 		digitalWrite(powerGate, LOW);
 	}
 	
@@ -149,11 +148,21 @@ void loop()
 	}
 }
 
-void indicatorControl (byte redOutput, byte greenOutput, byte blueOutput)
+void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 {
 	digitalWrite(redPin, redOutput);
 	digitalWrite(greenPin, greenOutput);
 	digitalWrite(bluePin, blueOutput);
+}
+
+void indicatorAlert()
+{
+	for (int i = 0; i <= 5; i++) {
+		indicatorAlert(HIGH, LOW, LOW);
+		delay(alertDelay);
+		indicatorAlert(LOW, LOW, LOW);
+		delay(alertDelay);
+	}
 }
 
 void shutDown()
