@@ -63,34 +63,8 @@ void loop()
 	drainInput = digitalRead(drainButton);
 	offInput = digitalRead(offButton);
 	
-	if (ldrValue >= triggerAt) {
-		jetsEngaged = timeOut(jetsEngaged, false);
-		digitalWrite(jetGate, HIGH);
-	} else {
-		jetsEngaged = timeOut(jetsEngaged, true);
-		digitalWrite(jetGate, LOW);
-	}
-
-	if (waterValue > waterMinimum || drainInput == HIGH) {
-		waterDanger = timeOut(waterDanger, false);
-		buttonPressed = timeOut(buttonPressed, false);
-
-		digitalWrite(jetGate, LOW);
-		digitalWrite(drainGate, HIGH);
-
-		if (drainInput == HIGH) {
-			indicatorControl(LOW, LOW, HIGH);
-		} else {
-			indicatorControl(HIGH, LOW, LOW);
-		}
-	} else {
-		waterDanger = timeOut(waterDanger, true);
-		buttonPressed = timeOut(buttonPressed, true);
-
-		digitalWrite(drainGate, LOW);
-
-		indicatorControl(LOW, HIGH, LOW);
-	}
+	tripwireEngage();
+	drainEngage();
 
 	if (offInput == HIGH) {
 		shutDown();
@@ -143,6 +117,41 @@ void tripwireCheck()
 	}
 }
 
+void tripwireEngage()
+{
+	if (ldrValue >= triggerAt) {
+		jetsEngaged = timeOut(jetsEngaged, false);
+		digitalWrite(jetGate, HIGH);
+	} else {
+		jetsEngaged = timeOut(jetsEngaged, true);
+		digitalWrite(jetGate, LOW);
+	}
+}
+
+void drainEngage()
+{
+	if (waterValue > waterMinimum || drainInput == HIGH) {
+		waterDanger = timeOut(waterDanger, false);
+		buttonPressed = timeOut(buttonPressed, false);
+
+		digitalWrite(jetGate, LOW);
+		digitalWrite(drainGate, HIGH);
+
+		if (drainInput == HIGH) {
+			indicatorControl(LOW, LOW, HIGH);
+		} else {
+			indicatorControl(HIGH, LOW, LOW);
+		}
+	} else {
+		waterDanger = timeOut(waterDanger, true);
+		buttonPressed = timeOut(buttonPressed, true);
+
+		digitalWrite(drainGate, LOW);
+
+		indicatorControl(LOW, HIGH, LOW);
+	}
+}
+
 void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 {
 	digitalWrite(redPin, redOutput);
@@ -160,7 +169,7 @@ void indicatorAlert()
 	}
 }
 
-void timeOut(bool previousState, bool testFor)
+bool timeOut(bool previousState, bool testFor)
 {
 	if (previousState == testFor) {
 		lastAction = currentTime;
