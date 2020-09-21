@@ -147,4 +147,15 @@ void loop()
 		digitalWrite(greenPin, HIGH);
 		digitalWrite(bluePin, LOW);
 	}
+
+	offInput = digitalRead(offButton);
+
+	if (offInput == HIGH) {
+		digitalWrite(jetGate, LOW);
+		digitalWrite(drainGate, LOW);
+		digitalWrite(redPin, LOW);
+		digitalWrite(greenPin, LOW);
+		digitalWrite(bluePin, LOW);
+		digitalWrite(powerGate, LOW);
+	}
 }
