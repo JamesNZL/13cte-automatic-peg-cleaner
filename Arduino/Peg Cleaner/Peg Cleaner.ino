@@ -21,6 +21,7 @@ const int bluePin = 11;
 const int laserPin = 12;
 const int testIterations = 5;
 const int maximumValue = 1023;
+const int alertDelay = 500;
 bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
@@ -63,7 +64,7 @@ void setup()
 
 	if (ldrValue < triggerAt) {
 		indicatorControl(HIGH, LOW, LOW);
-
+		delay(alertDelay);
 		digitalWrite(powerGate, LOW);
 	}
 	
