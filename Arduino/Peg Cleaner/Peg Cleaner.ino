@@ -31,7 +31,7 @@ unsigned long terminateTime = 180000;
 
 void setup() 
 {
-	pinMode(batterPin, INPUT);
+	pinMode(batteryPin, INPUT);
 	pinMode(waterPin, INPUT);
 	pinMode(ldrPin, INPUT);
 	pinMode(offButton, INPUT);
@@ -50,7 +50,7 @@ void setup()
 
 	digitalWrite(laserPin, LOW);
 
-	for (int i = 0; i <= (testIterations - 1); i++) {
+	for (int i = 0; i < testIterations; i++) {
 		testTotal += analogRead(ldrValue);
 	}
 
@@ -127,7 +127,7 @@ void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 
 void indicatorAlert()
 {
-	for (int i = 0; i <= 5; i++) {
+	for (int i = 0; i < 5; i++) {
 		indicatorAlert(HIGH, LOW, LOW);
 		delay(alertDelay);
 		indicatorAlert(LOW, LOW, LOW);
