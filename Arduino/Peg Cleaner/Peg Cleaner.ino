@@ -62,17 +62,13 @@ void setup()
 	ldrValue = analogRead(ldrPin);
 
 	if (ldrValue < triggerAt) {
-		digitalWrite(redPin, HIGH);
-		digitalWrite(greenPin, LOW);
-		digitalWrite(bluePin, LOW);
+		indicatorControl(HIGH, LOW, LOW);
 
 		digitalWrite(powerGate, LOW);
 	}
 	
 	else if (ldrValue > triggerAt) {
-		digitalWrite(redPin, LOW);
-		digitalWrite(greenPin, HIGH);
-		digitalWrite(bluePin, LOW);
+		indicatorControl(LOW, HIGH, LOW);
 	}
 }
 
@@ -107,9 +103,7 @@ void loop()
 		waterDanger = true;
 		digitalWrite(drainGate, HIGH);
 
-		digitalWrite(redPin, HIGH);
-		digitalWrite(greenPin, LOW);
-		digitalWrite(bluePin, LOW);
+		indicatorControl(HIGH, LOW, LOW);
 	} else {
 		if (waterDanger == true) {
 			lastAction = currentTime;
@@ -118,9 +112,7 @@ void loop()
 		waterDanger = false;
 		digitalWrite(drainGate, LOW);
 
-		digitalWrite(redPin, LOW);
-		digitalWrite(greenPin, HIGH);
-		digitalWrite(bluePin, LOW);
+		indicatorControl(LOW, HIGH, LOW);
 	}
 
 	drainInput = digitalRead(drainButton);
@@ -133,9 +125,7 @@ void loop()
 		buttonPressed = true;
 		digitalWrite(drainGate, HIGH);
 
-		digitalWrite(redPin, LOW);
-		digitalWrite(greenPin, LOW);
-		digitalWrite(bluePin, HIGH);
+		indicatorControl(LOW, LOW, HIGH);
 	} else {
 		if (buttonPressed == true) {
 			lastAction = currentTime;
@@ -144,9 +134,7 @@ void loop()
 		buttonPressed = false;
 		digitalWrite(drainGate, LOW);
 
-		digitalWrite(redPin, LOW);
-		digitalWrite(greenPin, HIGH);
-		digitalWrite(bluePin, LOW);
+		indicatorControl(LOW, HIGH, LOW);
 	}
 
 	offInput = digitalRead(offButton);
@@ -160,12 +148,17 @@ void loop()
 	}
 }
 
+void indicatorControl (byte redOutput, byte greenOutput, byte blueOutput)
+{
+	digitalWrite(redPin, redOutput);
+	digitalWrite(greenPin, greenOutput);
+	digitalWrite(bluePin, blueOutput);
+}
+
 void shutDown()
 {
 	digitalWrite(jetGate, LOW);
 	digitalWrite(drainGate, LOW);
-	digitalWrite(redPin, LOW);
-	digitalWrite(greenPin, LOW);
-	digitalWrite(bluePin, LOW);
+	indicatorControl(LOW, LOW, LOW);
 	digitalWrite(powerGate, LOW);
 }
