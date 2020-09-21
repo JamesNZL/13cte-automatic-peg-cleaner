@@ -23,6 +23,7 @@ const int testIterations = 5;
 const int maximumValue = 1023;
 unsigned long currentTime;
 unsigned long lastAction = 0;
+bool jetsEngaged = false;
 bool waterDanger = false;
 
 void setup() 
@@ -79,21 +80,40 @@ void loop()
 	ldrValue = analogRead(ldrPin);
 	
 	if (ldrValue >= triggerAt) {
+		if (jetsEngaged == false) {
+			lastAction = currentTime;
+		}
+
+		jetsEngaged = true;
 		digitalWrite(jetGate, HIGH);
-		lastAction = currentTime;
 	} else {
+		if (jetsEngaged == true) {
+			lastAction = currentTime;
+		}
+
+		jetsEngaged = false;
 		digitalWrite(jetGate, LOW);
 	}
 
 	waterValue = analogRead(waterPin);
 
 	if (waterValue > waterMinimum) {
+		if (waterDanger == false) {
+			lastAction = currentTime;
+		}
+
+		waterDanger = true;
 		digitalWrite(drainGate, HIGH);
 
 		digitalWrite(redPin, HIGH);
 		digitalWrite(greenPin, LOW);
 		digitalWrite(bluePin, LOW);
 	} else {
+		if (waterDanger == true) {
+			lastAction = currentTime;
+		}
+
+		waterDanger = false;
 		digitalWrite(drainGate, LOW);
 
 		digitalWrite(redPin, LOW);
