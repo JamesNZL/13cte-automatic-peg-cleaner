@@ -56,7 +56,7 @@ void setup()
 	disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
 
-	ldrValue = analogRead(sensorPin);
+	ldrValue = analogRead(ldrPin);
 
 	if (ldrValue < triggerAt) {
 		digitalWrite(redPin, HIGH);
@@ -74,10 +74,10 @@ void setup()
 void loop() 
 {
 	currentTime = millis();
-	ldrValue = analogRead(sensorPin);
+	ldrValue = analogRead(ldrPin);
 	
 	while (ldrValue >= triggerAt) {
-		ldrValue = analogRead(sensorPin);
+		ldrValue = analogRead(ldrPin);
 		Serial.println(ldrValue);
 	}
 
