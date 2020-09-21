@@ -80,7 +80,7 @@ void loop()
 	drainInput = digitalRead(drainButton);
 	offInput = digitalRead(offButton);
 	
-	if (ldrValue >= triggerAt && waterValue < waterMinimum && drainInput == LOW) {
+	if (ldrValue >= triggerAt) {
 		jetsEngaged = timeOut(jetsEngaged, false);
 		digitalWrite(jetGate, HIGH);
 	} else {
@@ -92,6 +92,7 @@ void loop()
 		waterDanger = timeOut(waterDanger, false);
 		buttonPressed = timeOut(buttonPressed, false);
 
+		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, HIGH);
 
 		if (drainInput == HIGH) {
