@@ -50,38 +50,9 @@ void setup()
 
 	Serial.begin(9600);
 
-	batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
-
-	if (batteryValue < batteryLow) {
-		indicatorAlert();
-	}
-
-	else if (batteryValue < batteryCritical) {
-		indicatorAlert();
-		digitalWrite(powerGate, LOW);
-	}
-
-	digitalWrite(laserPin, LOW);
-
-	for (int i = 0; i < testIterations; i++) {
-		testTotal += analogRead(ldrValue);
-	}
-
-	digitalWrite(laserPin, HIGH);
-
-	disarmedValue = testTotal / testIterations;
-	triggerAt = (maximumValue + disarmedValue) / 2;
-
-	ldrValue = analogRead(ldrPin);
-
-	while (ldrValue < triggerAt) {
-		ldrValue = analogRead(ldrPin);
-		indicatorAlert();
-	}
-	
-	else if (ldrValue > triggerAt) {
-		indicatorControl(LOW, HIGH, LOW);
-	}
+	batteryCheck();
+	tripwireSetup();
+	tripwireCheck();
 }
 
 void loop() 
@@ -127,6 +98,48 @@ void loop()
 
 	if ((currentTime - lastAction) >= terminateTime) {
 		shutDown();
+	}
+}
+
+void batteryCheck()
+{
+	batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
+
+	if (batteryValue < batteryLow) {
+		indicatorAlert();
+	}
+
+	else if (batteryValue < batteryCritical) {
+		indicatorAlert();
+		digitalWrite(powerGate, LOW);
+	}
+}
+
+void tripwireSetup()
+{
+	digitalWrite(laserPin, LOW);
+
+	for (int i = 0; i < testIterations; i++) {
+		testTotal += analogRead(ldrValue);
+	}
+
+	digitalWrite(laserPin, HIGH);
+
+	disarmedValue = testTotal / testIterations;
+	triggerAt = (maximumValue + disarmedValue) / 2;
+}
+
+void tripwireCheck()
+{
+	ldrValue = analogRead(ldrPin);
+
+	while (ldrValue < triggerAt) {
+		ldrValue = analogRead(ldrPin);
+		indicatorAlert();
+	}
+	
+	else if (ldrValue > triggerAt) {
+		indicatorControl(LOW, HIGH, LOW);
 	}
 }
 
