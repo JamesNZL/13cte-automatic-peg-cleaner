@@ -122,7 +122,7 @@ void tripwireCheck()
 		indicatorAlert();
 	}
 	
-	else if (ldrValue > triggerAt) {
+	if (ldrValue > triggerAt) {
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
