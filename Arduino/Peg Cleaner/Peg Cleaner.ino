@@ -1,7 +1,12 @@
-int sensorValue;
+int batteryValue;
+int waterValue;
+int ldrValue;
+int offInput;
+int drainInput;
 int disarmedValue;
 int triggerAt;
 int testTotal;
+int waterMinimum = 200;
 const int batteryPin = A0;
 const int waterPin = A1;
 const int ldrPin = A2;
@@ -16,6 +21,9 @@ const int bluePin = 11;
 const int laserPin = 12;
 const int testIterations = 5;
 const int maximumValue = 1023;
+unsigned long currentTime;
+unsigned long lastAction = 0;
+bool waterDanger = false;
 
 void setup() 
 {
@@ -39,23 +47,24 @@ void setup()
 	digitalWrite(laserPin, LOW);
 
 	for (int i = 0; i <= (testIterations - 1); i++) {
-		testTotal += analogRead(sensorValue);
+		testTotal += analogRead(ldrValue);
 	}
 
 	digitalWrite(laserPin, HIGH);
+	lastAction = currentTime;
 
 	disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
 
-	sensorValue = analogRead(sensorPin);
+	ldrValue = analogRead(sensorPin);
 
-	if (sensorValue < triggerAt) {
+	if (ldrValue < triggerAt) {
 		digitalWrite(redPin, HIGH);
 		digitalWrite(greenPin, LOW);
 		digitalWrite(bluePin, LOW);
 	}
 	
-	else if (sensorValue > triggerAt) {
+	else if (ldrValue > triggerAt) {
 		digitalWrite(redPin, LOW);
 		digitalWrite(greenPin, HIGH);
 		digitalWrite(bluePin, LOW);
@@ -64,13 +73,14 @@ void setup()
 
 void loop() 
 {
-	sensorValue = analogRead(sensorPin);
+	currentTime = millis();
+	ldrValue = analogRead(sensorPin);
 	
-	while (sensorValue >= triggerAt) {
-		sensorValue = analogRead(sensorPin);
-		Serial.println(sensorValue);
+	while (ldrValue >= triggerAt) {
+		ldrValue = analogRead(sensorPin);
+		Serial.println(ldrValue);
 	}
 
 	Serial.print("Triggered @ ");
-	Serial.println(sensorValue);
+	Serial.println(ldrValue);
 }
