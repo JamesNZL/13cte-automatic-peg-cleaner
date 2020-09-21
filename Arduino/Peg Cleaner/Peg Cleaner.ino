@@ -21,11 +21,12 @@ const int bluePin = 11;
 const int laserPin = 12;
 const int testIterations = 5;
 const int maximumValue = 1023;
-unsigned long currentTime;
-unsigned long lastAction = 0;
 bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
+unsigned long currentTime;
+unsigned long lastAction = 0;
+unsigned long terminateTime = 180000;
 
 void setup() 
 {
@@ -151,6 +152,15 @@ void loop()
 	offInput = digitalRead(offButton);
 
 	if (offInput == HIGH) {
+		digitalWrite(jetGate, LOW);
+		digitalWrite(drainGate, LOW);
+		digitalWrite(redPin, LOW);
+		digitalWrite(greenPin, LOW);
+		digitalWrite(bluePin, LOW);
+		digitalWrite(powerGate, LOW);
+	}
+
+	if lastAction >= terminateTime {
 		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, LOW);
 		digitalWrite(redPin, LOW);
