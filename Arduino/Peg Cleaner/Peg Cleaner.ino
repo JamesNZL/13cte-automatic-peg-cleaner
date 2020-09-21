@@ -78,9 +78,22 @@ void loop()
 	
 	while (ldrValue >= triggerAt) {
 		ldrValue = analogRead(ldrPin);
-		Serial.println(ldrValue);
+
+		digitalWrite(jetGate, HIGH);
+		lastAction = currentTime;
 	}
 
-	Serial.print("Triggered @ ");
-	Serial.println(ldrValue);
+	digitalWrite(jetGate, LOW);
+
+	waterValue = analogRead(waterPin);
+
+	if (waterValue > waterMinimum) {
+		digitalWrite(drainGate, HIGH);
+
+		digitalWrite(redPin, HIGH);
+		digitalWrite(greenPin, LOW);
+		digitalWrite(bluePin, LOW);
+	}
+
+	digitalWrite(drainGate, LOW);
 }
