@@ -62,6 +62,8 @@ void setup()
 		digitalWrite(redPin, HIGH);
 		digitalWrite(greenPin, LOW);
 		digitalWrite(bluePin, LOW);
+
+		digitalWrite(powerGate, LOW);
 	}
 	
 	else if (ldrValue > triggerAt) {
@@ -94,6 +96,8 @@ void loop()
 	} else {
 		digitalWrite(drainGate, LOW);
 
-
+		digitalWrite(redPin, LOW);
+		digitalWrite(greenPin, HIGH);
+		digitalWrite(bluePin, LOW);
 	}
 }
