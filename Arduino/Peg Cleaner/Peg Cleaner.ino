@@ -76,14 +76,12 @@ void loop()
 	currentTime = millis();
 	ldrValue = analogRead(ldrPin);
 	
-	while (ldrValue >= triggerAt) {
-		ldrValue = analogRead(ldrPin);
-
+	if (ldrValue >= triggerAt) {
 		digitalWrite(jetGate, HIGH);
 		lastAction = currentTime;
+	} else {
+		digitalWrite(jetGate, LOW);
 	}
-
-	digitalWrite(jetGate, LOW);
 
 	waterValue = analogRead(waterPin);
 
@@ -93,7 +91,9 @@ void loop()
 		digitalWrite(redPin, HIGH);
 		digitalWrite(greenPin, LOW);
 		digitalWrite(bluePin, LOW);
-	}
+	} else {
+		digitalWrite(drainGate, LOW);
 
-	digitalWrite(drainGate, LOW);
+
+	}
 }
