@@ -68,16 +68,15 @@ void setup()
 	}
 
 	digitalWrite(laserPin, HIGH);
-	lastAction = currentTime;
 
 	disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
 
 	ldrValue = analogRead(ldrPin);
 
-	if (ldrValue < triggerAt) {
+	while (ldrValue < triggerAt) {
+		ldrValue = analogRead(ldrPin);
 		indicatorAlert();
-		digitalWrite(powerGate, LOW);
 	}
 	
 	else if (ldrValue > triggerAt) {
