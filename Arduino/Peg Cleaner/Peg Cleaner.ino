@@ -50,7 +50,7 @@ void setup()
 
 	Serial.begin(9600);
 
-	batteryValue = analogRead(batteryPin);
+	batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
 
 	if (batteryValue < batteryLow) {
 		indicatorAlert();
