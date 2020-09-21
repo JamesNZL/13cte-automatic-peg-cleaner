@@ -1,4 +1,4 @@
-int batteryValue;
+float batteryValue;
 int waterValue;
 int ldrValue;
 int offInput;
@@ -7,6 +7,8 @@ int disarmedValue;
 int triggerAt;
 int testTotal;
 int waterMinimum = 200;
+const float batteryLow = 3.9;
+const float batteryCritical = 3.7;
 const int batteryPin = A0;
 const int waterPin = A1;
 const int ldrPin = A2;
@@ -47,6 +49,17 @@ void setup()
 	digitalWrite(powerGate, HIGH);
 
 	Serial.begin(9600);
+
+	batteryValue = analogRead(batteryPin);
+
+	if (batteryValue < batteryLow) {
+		indicatorAlert();
+	}
+
+	else if (batteryValue < batteryCritical) {
+		indicatorAlert();
+		digitalWrite(powerGate, LOW);
+	}
 
 	digitalWrite(laserPin, LOW);
 
