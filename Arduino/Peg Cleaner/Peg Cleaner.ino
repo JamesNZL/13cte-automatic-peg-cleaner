@@ -21,6 +21,7 @@ const int bluePin = 11;
 const int laserPin = 12;
 const int testIterations = 5;
 const int maximumValue = 1023;
+const int drainDelay = 15000;
 unsigned long currentTime;
 unsigned long lastAction = 0;
 bool jetsEngaged = false;
@@ -114,6 +115,24 @@ void loop()
 		}
 
 		waterDanger = false;
+		digitalWrite(drainGate, LOW);
+
+		digitalWrite(redPin, LOW);
+		digitalWrite(greenPin, HIGH);
+		digitalWrite(bluePin, LOW);
+	}
+
+	drainInput = digitalRead(drainButton);
+
+	if (drainInput == HIGH) {
+		digitalWrite(drainGate, HIGH);
+
+		digitalWrite(redPin, LOW);
+		digitalWrite(greenPin, LOW);
+		digitalWrite(bluePin, HIGH);
+
+		delay(drainDelay);
+
 		digitalWrite(drainGate, LOW);
 
 		digitalWrite(redPin, LOW);
