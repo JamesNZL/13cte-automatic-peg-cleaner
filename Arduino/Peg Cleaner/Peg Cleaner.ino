@@ -160,7 +160,7 @@ void loop()
 		digitalWrite(powerGate, LOW);
 	}
 
-	if lastAction >= terminateTime {
+	if ((currentTime - lastAction) >= terminateTime) {
 		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, LOW);
 		digitalWrite(redPin, LOW);
