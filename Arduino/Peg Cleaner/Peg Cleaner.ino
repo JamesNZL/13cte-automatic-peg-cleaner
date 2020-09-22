@@ -131,12 +131,16 @@ void tripwireEngage()
 		jetsEngaged = timeOut(jetsEngaged, false);
 		
 		digitalWrite(jetGate, HIGH);
+
+		indicatorControl(LOW, HIGH, HIGH);
 	} 
 
 	else {
 		jetsEngaged = timeOut(jetsEngaged, true);
 		
 		digitalWrite(jetGate, LOW);
+
+		indicatorControl(LOW, HIGH, LOW);
 	}
 }
 
