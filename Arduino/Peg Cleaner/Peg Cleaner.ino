@@ -56,6 +56,7 @@ void setup()
 
 	Serial.begin(9600);
 
+	indicatorControl(HIGH, LOW, LOW);
 	batteryCheck();
 	tripwireSetup();
 	tripwireCheck();
@@ -120,6 +121,9 @@ void tripwireCheck()
 		ldrValue = analogRead(ldrPin);
 
 		indicatorAlert();
+
+		Serial.println(ldrValue);
+		Serial.println(triggerAt);
 	}
 	
 	if (ldrValue > triggerAt) {
