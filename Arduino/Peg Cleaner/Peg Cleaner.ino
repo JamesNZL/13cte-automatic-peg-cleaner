@@ -35,7 +35,7 @@ bool buttonPressed = false;
 unsigned long currentTime;
 unsigned long lastAction = 0;
 unsigned long terminateTime = 180000;
-unsigned long terminateNotify = 5000;
+unsigned long terminateNotify = 15000;
 
 void setup() 
 {
@@ -209,7 +209,10 @@ void checkTurnOff()
 
 	if ((currentTime - lastAction) >= (terminateTime - terminateNotify)) {
 		indicatorAlert(HIGH, HIGH, LOW);
-		
+		indicatorControl(HIGH, HIGH, LOW);
+	}
+
+	else if ((currentTime - lastAction) >= terminateTime) {
 		shutDown();
 	}
 }
