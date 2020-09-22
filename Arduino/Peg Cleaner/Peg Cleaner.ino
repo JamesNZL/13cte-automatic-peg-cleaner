@@ -185,7 +185,7 @@ void indicatorAlert(byte redOutput, byte greenOutput, byte blueOutput)
 	for (int i = 0; i < 5; i++) {
 		indicatorControl(redOutput, greenOutput, blueOutput);
 		delay(alertDelay);
-		indicatorControl(redOutput, greenOutput, blueOutput);
+		indicatorControl(LOW, LOW, LOW);
 		delay(alertDelay);
 	}
 }
