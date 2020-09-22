@@ -74,14 +74,7 @@ void loop()
 	
 	tripwireEngage();
 	drainEngage();
-
-	if (offInput == HIGH) {
-		shutDown();
-	}
-
-	if ((currentTime - lastAction) >= terminateTime) {
-		shutDown();
-	}
+	checkTurnOff();
 }
 
 void batteryCheck()
@@ -121,6 +114,7 @@ void tripwireCheck()
 		ldrValue = analogRead(ldrPin);
 
 		indicatorAlert();
+		checkTurnOff();
 
 		Serial.println(ldrValue);
 		Serial.println(triggerAt);
@@ -198,6 +192,19 @@ bool timeOut(bool previousState, bool testFor)
 	}
 
 	return !testFor;
+}
+
+void checkTurnOff()
+{
+	currentTime = millis();
+
+	if (offInput == HIGH) {
+		shutDown();
+	}
+
+	if ((currentTime - lastAction) >= terminateTime) {
+		shutDown();
+	}
 }
 
 void shutDown()
