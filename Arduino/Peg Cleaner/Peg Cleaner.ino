@@ -82,11 +82,11 @@ void batteryCheck()
 	batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
 
 	if (batteryValue < batteryLow) {
-		indicatorAlert();
+		indicatorAlert(HIGH, LOW, LOW);
 	}
 
 	else if (batteryValue < batteryCritical) {
-		indicatorAlert();
+		indicatorAlert(HIGH, LOW, LOW);
 
 		digitalWrite(powerGate, LOW);
 	}
@@ -113,7 +113,7 @@ void tripwireCheck()
 	while (ldrValue < triggerAt) {
 		ldrValue = analogRead(ldrPin);
 
-		indicatorAlert();
+		indicatorAlert(HIGH, LOW, LOW);
 		checkTurnOff();
 
 		Serial.println(ldrValue);
@@ -175,12 +175,12 @@ void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 	digitalWrite(bluePin, blueOutput);
 }
 
-void indicatorAlert()
+void indicatorAlert(byte redOutput, byte greenOutput, byte blueOutput)
 {
 	for (int i = 0; i < 5; i++) {
-		indicatorControl(HIGH, LOW, LOW);
+		indicatorControl(redOutput, greenOutput, blueOutput);
 		delay(alertDelay);
-		indicatorControl(LOW, LOW, LOW);
+		indicatorControl(redOutput, greenOutput, blueOutput);
 		delay(alertDelay);
 	}
 }
