@@ -202,8 +202,8 @@ bool timeOut(bool previousState, bool testFor)
 
 void shutDown()
 {
+	indicatorControl(LOW, LOW, LOW);
 	digitalWrite(jetGate, LOW);
 	digitalWrite(drainGate, LOW);
-	indicatorControl(LOW, LOW, LOW);
 	digitalWrite(powerGate, LOW);
 }
