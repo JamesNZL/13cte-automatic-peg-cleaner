@@ -9,6 +9,16 @@ int triggerAt;
 int testTotal;
 int waterMinimum = 200;
 
+bool jetsEngaged = false;
+bool waterDanger = false;
+bool buttonPressed = false;
+
+unsigned long currentTime;
+unsigned long lastAction = 0;
+unsigned long lastAlert = 0;
+unsigned long terminateTime = 180000;
+unsigned long terminateNotify = 15000;
+
 const float batteryLow = 3.9;
 const float batteryCritical = 3.7;
 
@@ -26,16 +36,10 @@ const int bluePin = 11;
 const int laserPin = 12;
 const int testIterations = 5;
 const int maximumValue = 1023;
-const int alertDelay = 500;
 
-bool jetsEngaged = false;
-bool waterDanger = false;
-bool buttonPressed = false;
+const unsigned long alertDelay = 500;
 
-unsigned long currentTime;
-unsigned long lastAction = 0;
-unsigned long terminateTime = 180000;
-unsigned long terminateNotify = 15000;
+
 
 void setup() 
 {
@@ -203,6 +207,8 @@ void checkTurnOff()
 	currentTime = millis();
 	offInput = digitalRead(offButton);
 
+	bool pinState = HIGH;
+
 	if (offInput == HIGH) {
 		shutDown();
 	}
@@ -212,8 +218,12 @@ void checkTurnOff()
 	}
 
 	else if ((currentTime - lastAction) >= (terminateTime - terminateNotify)) {
-		indicatorAlert(HIGH, HIGH, LOW);
-		indicatorControl(HIGH, HIGH, LOW);
+		if ((currentTime - lastAlert) >= alertDelay) {
+			indicatorControl(pinState, pinState, LOW);
+
+			pinState = !pinState
+			lastAlert = currentTime
+		}
 	}
 }
 
