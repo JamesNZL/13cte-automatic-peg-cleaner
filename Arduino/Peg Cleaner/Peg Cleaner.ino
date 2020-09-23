@@ -39,8 +39,6 @@ const int maximumValue = 1023;
 
 const unsigned long alertDelay = 500;
 
-
-
 void setup() 
 {
 	pinMode(batteryPin, INPUT);
