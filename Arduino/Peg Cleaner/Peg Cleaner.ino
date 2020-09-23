@@ -92,7 +92,7 @@ void tripwireSetup()
 	digitalWrite(laserPin, LOW);
 
 	for (int i = 0; i < testIterations; i++) {
-		testTotal += analogRead(ldrValue);
+		testTotal += analogRead(ldrPin);
 	}
 
 	digitalWrite(laserPin, HIGH);
