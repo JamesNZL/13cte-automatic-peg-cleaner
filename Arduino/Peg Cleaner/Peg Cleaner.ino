@@ -207,13 +207,13 @@ void checkTurnOff()
 		shutDown();
 	}
 
-	if ((currentTime - lastAction) >= (terminateTime - terminateNotify)) {
-		indicatorAlert(HIGH, HIGH, LOW);
-		indicatorControl(HIGH, HIGH, LOW);
+	if ((currentTime - lastAction) >= terminateTime) {
+		shutDown();
 	}
 
-	else if ((currentTime - lastAction) >= terminateTime) {
-		shutDown();
+	else if ((currentTime - lastAction) >= (terminateTime - terminateNotify)) {
+		indicatorAlert(HIGH, HIGH, LOW);
+		indicatorControl(HIGH, HIGH, LOW);
 	}
 }
 
