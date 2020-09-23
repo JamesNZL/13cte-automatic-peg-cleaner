@@ -66,12 +66,6 @@ void setup()
 void loop() 
 {
 	currentTime = millis();
-
-	ldrValue = analogRead(ldrPin);
-	waterValue = analogRead(waterPin);
-
-	drainInput = digitalRead(drainButton);
-	offInput = digitalRead(offButton);
 	
 	tripwireEngage();
 	drainEngage();
@@ -128,6 +122,8 @@ void tripwireCheck()
 
 void tripwireEngage()
 {
+	ldrValue = analogRead(ldrPin);
+
 	if (ldrValue >= triggerAt) {
 		jetsEngaged = timeOut(jetsEngaged, false);
 		
@@ -147,6 +143,9 @@ void tripwireEngage()
 
 void drainEngage()
 {
+	waterValue = analogRead(waterPin);
+	drainInput = digitalRead(drainButton);
+
 	if (waterValue > waterMinimum || drainInput == HIGH) {
 		waterDanger = timeOut(waterDanger, false);
 		buttonPressed = timeOut(buttonPressed, false);
@@ -202,6 +201,7 @@ bool timeOut(bool previousState, bool testFor)
 void checkTurnOff()
 {
 	currentTime = millis();
+	offInput = digitalRead(offButton);
 
 	if (offInput == HIGH) {
 		shutDown();
