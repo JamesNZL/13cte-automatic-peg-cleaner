@@ -18,7 +18,7 @@ bool pinState = HIGH;
 unsigned long currentTime;
 unsigned long lastAction = 0;
 unsigned long lastAlert = 0;
-unsigned long terminateTime = 60000;
+unsigned long terminateTime = 30000;
 unsigned long terminateNotify = 15000;
 
 const float batteryLow = 3.9;
