@@ -137,7 +137,7 @@ void tripwireEngage()
 {
 	ldrValue = analogRead(ldrPin);
 
-	if (ldrValue >= triggerAt) {
+	if (ldrValue <= triggerAt) {
 		jetsEngaged = timeOut(jetsEngaged, false);
 		
 		digitalWrite(jetGate, HIGH);
