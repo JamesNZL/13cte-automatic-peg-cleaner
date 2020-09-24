@@ -219,8 +219,8 @@ void checkTurnOff()
 		if ((currentTime - lastAlert) >= alertDelay) {
 			indicatorControl(pinState, pinState, LOW);
 
-			pinState = !pinState
-			lastAlert = currentTime
+			pinState = !pinState;
+			lastAlert = currentTime;
 		}
 	}
 }
