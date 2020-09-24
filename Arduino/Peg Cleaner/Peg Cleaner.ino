@@ -274,7 +274,7 @@ bool checkTurnOff()
 		terminateAlert = true;
 
 		if ((currentTime - lastAlert) >= alertDelay) {
-			indicatorControl(pinState, LOW, LOW);
+			indicatorControl(LOW, pinState, LOW);
 
 			pinState = !pinState;
 			lastAlert = currentTime;
