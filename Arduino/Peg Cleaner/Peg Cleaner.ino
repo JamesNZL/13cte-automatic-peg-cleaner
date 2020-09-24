@@ -149,7 +149,7 @@ bool tripwireEngage()
 
 		Serial.println("Engaged");
 
-		indicatorControl(LOW, HIGH, HIGH);
+		indicatorControl(LOW, LOW, HIGH);
 
 		return jetsEngaged;
 	} 
