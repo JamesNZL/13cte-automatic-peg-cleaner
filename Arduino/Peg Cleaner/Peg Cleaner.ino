@@ -289,8 +289,10 @@ bool checkTurnOff()
 
 void shutDown()
 {
-	indicatorControl(LOW, LOW, LOW);
-	digitalWrite(jetGate, LOW);
-	digitalWrite(drainGate, LOW);
-	digitalWrite(powerGate, LOW);
+	while (true) {
+		indicatorControl(LOW, LOW, LOW);
+		digitalWrite(jetGate, LOW);
+		digitalWrite(drainGate, LOW);
+		digitalWrite(powerGate, LOW);
+	}
 }
