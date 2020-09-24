@@ -108,6 +108,11 @@ void tripwireSetup()
 
 	for (int i = 0; i < testIterations; i++) {
 		testTotal += analogRead(ldrPin);
+
+		if (analogRead(ldrPin) == 0) {
+			break;
+		}
+
 		Serial.print("Test total: ");
 		Serial.println(testTotal);
 	}
