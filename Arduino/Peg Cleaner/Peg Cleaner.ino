@@ -271,13 +271,13 @@ bool checkTurnOff()
 	}
 
 	else if ((currentTime - lastAction) >= (terminateTime - terminateNotify)) {
+		terminateAlert = true;
+
 		if ((currentTime - lastAlert) >= alertDelay) {
 			indicatorControl(pinState, LOW, LOW);
 
 			pinState = !pinState;
 			lastAlert = currentTime;
-
-			terminateAlert = true;
 		}
 	}
 
