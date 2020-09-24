@@ -12,6 +12,7 @@ int waterMinimum = 200;
 bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
+bool pinState = HIGH;
 
 unsigned long currentTime;
 unsigned long lastAction = 0;
@@ -231,8 +232,6 @@ void checkTurnOff()
 {
 	currentTime = millis();
 	offInput = digitalRead(offButton);
-
-	bool pinState = HIGH;
 
 	if (offInput == HIGH) {
 		shutDown();
