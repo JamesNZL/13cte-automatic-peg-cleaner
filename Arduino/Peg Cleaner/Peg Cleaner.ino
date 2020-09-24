@@ -13,6 +13,7 @@ bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
 bool drainEngaged = false;
+bool terminateAlert = false;
 bool pinState = HIGH;
 
 unsigned long currentTime;
@@ -73,9 +74,9 @@ void loop()
 	
 	jetsEngaged = tripwireEngage();
 	drainEngaged = drainEngage();
-	checkTurnOff();
+	terminateAlert = checkTurnOff();
 
-	if (jetsEngaged == false && drainEngaged == false) {
+	if (jetsEngaged == false && drainEngaged == false && terminateAlert == false) {
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
@@ -237,10 +238,12 @@ bool timeOut(bool previousState, bool testFor)
 	return !testFor;
 }
 
-void checkTurnOff()
+bool checkTurnOff()
 {
 	currentTime = millis();
 	offInput = digitalRead(offButton);
+
+	terminateAlert = false;
 
 	if (offInput == HIGH) {
 		shutDown();
@@ -256,8 +259,12 @@ void checkTurnOff()
 
 			pinState = !pinState;
 			lastAlert = currentTime;
+
+			terminateAlert = true;
 		}
 	}
+
+	return terminateAlert;
 }
 
 void shutDown()
