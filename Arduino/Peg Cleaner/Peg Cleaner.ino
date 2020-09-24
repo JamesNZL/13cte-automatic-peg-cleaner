@@ -12,6 +12,7 @@ int waterMinimum = 200;
 bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
+bool drainEngaged = false;
 bool pinState = HIGH;
 
 unsigned long currentTime;
@@ -70,9 +71,13 @@ void loop()
 {
 	currentTime = millis();
 	
-	tripwireEngage();
-	drainEngage();
+	jetsEngaged = tripwireEngage();
+	drainEngaged = drainEngage();
 	checkTurnOff();
+
+	if (jetsEngaged == false && drainEngaged == false) {
+		indicatorControl(LOW, HIGH, LOW);
+	}
 }
 
 void batteryCheck()
@@ -133,7 +138,7 @@ void tripwireCheck()
 	}
 }
 
-void tripwireEngage()
+bool tripwireEngage()
 {
 	ldrValue = analogRead(ldrPin);
 
@@ -145,6 +150,8 @@ void tripwireEngage()
 		Serial.println("Engaged");
 
 		indicatorControl(LOW, HIGH, HIGH);
+
+		return jetsEngaged;
 	} 
 
 	else {
@@ -154,11 +161,11 @@ void tripwireEngage()
 
 		Serial.println("Not engaged");
 
-		indicatorControl(LOW, HIGH, LOW);
+		return jetsEngaged;
 	}
 }
 
-void drainEngage()
+bool drainEngage()
 {
 	waterValue = analogRead(waterPin);
 	drainInput = digitalRead(drainButton);
@@ -179,7 +186,9 @@ void drainEngage()
 		else {
 			indicatorControl(HIGH, LOW, LOW);
 		}
-	} 
+
+		return true;
+	}
 
 	else {
 		waterDanger = timeOut(waterDanger, true);
@@ -189,7 +198,7 @@ void drainEngage()
 
 		Serial.println("Not draining");
 
-		indicatorControl(LOW, HIGH, LOW);
+		return false;
 	}
 }
 
