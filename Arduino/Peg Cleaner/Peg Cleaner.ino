@@ -60,8 +60,6 @@ void setup()
 	
 	digitalWrite(powerGate, HIGH);
 
-	Serial.begin(9600);
-
 	indicatorControl(HIGH, LOW, LOW);
 	batteryCheck();
 	tripwireSetup();
@@ -77,10 +75,6 @@ void loop()
 	terminateAlert = checkTurnOff();
 
 	if (jetsEngaged == false && drainEngaged == false && terminateAlert == false) {
-		Serial.print(jetsEngaged);
-		Serial.print(drainEngaged);
-		Serial.print(terminateAlert);
-		Serial.println("Green");
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
@@ -88,8 +82,6 @@ void loop()
 void batteryCheck()
 {
 	batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
-	Serial.print("Battery value: ");
-	Serial.println(batteryValue);
 
 	if (batteryValue < batteryLow) {
 		indicatorAlert(HIGH, LOW, LOW);
@@ -112,19 +104,12 @@ void tripwireSetup()
 		if (analogRead(ldrPin) == 0) {
 			break;
 		}
-
-		Serial.print("Test total: ");
-		Serial.println(testTotal);
 	}
 
 	digitalWrite(laserPin, HIGH);
 
 	disarmedValue = testTotal / testIterations;
-	Serial.print("Disarmed value: ");
-	Serial.println(disarmedValue);
 	triggerAt = (maximumValue + disarmedValue) / 2;
-	Serial.print("Trigger at: ");
-	Serial.println(triggerAt);
 }
 
 void tripwireCheck()
@@ -142,13 +127,7 @@ void tripwireCheck()
 		ldrValue = analogRead(ldrPin);
 
 		indicatorControl(HIGH, LOW, LOW);
-
 		checkTurnOff();
-
-		Serial.print("LDR value: ");
-		Serial.println(ldrValue);
-		Serial.print("Trigger at: ");
-		Serial.println(triggerAt);
 	}
 	
 	if (ldrValue > triggerAt) {
@@ -165,8 +144,6 @@ bool tripwireEngage()
 		
 		digitalWrite(jetGate, HIGH);
 
-		Serial.println("Engaged");
-
 		indicatorControl(LOW, LOW, HIGH);
 
 		return jetsEngaged;
@@ -176,8 +153,6 @@ bool tripwireEngage()
 		jetsEngaged = timeOut(jetsEngaged, true);
 		
 		digitalWrite(jetGate, LOW);
-
-		Serial.println("Not engaged");
 
 		return jetsEngaged;
 	}
@@ -191,8 +166,6 @@ bool drainEngage()
 	if (waterValue > waterMinimum || drainInput == HIGH) {
 		waterDanger = timeOut(waterDanger, false);
 		buttonPressed = timeOut(buttonPressed, false);
-
-		Serial.println("Draining");
 
 		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, HIGH);
@@ -214,8 +187,6 @@ bool drainEngage()
 
 		digitalWrite(drainGate, LOW);
 
-		Serial.println("Not draining");
-
 		return false;
 	}
 }
@@ -225,11 +196,6 @@ void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 	digitalWrite(redPin, redOutput);
 	digitalWrite(greenPin, greenOutput);
 	digitalWrite(bluePin, blueOutput);
-
-	Serial.print("Indicator: ");
-	Serial.print(redOutput);
-	Serial.print(greenOutput);
-	Serial.println(blueOutput);
 }
 
 void indicatorAlert(byte redOutput, byte greenOutput, byte blueOutput)
@@ -239,8 +205,6 @@ void indicatorAlert(byte redOutput, byte greenOutput, byte blueOutput)
 		delay(alertDelay);
 		indicatorControl(LOW, LOW, LOW);
 		delay(alertDelay);
-		Serial.print("Alert loop ");
-		Serial.println(i);
 	}
 }
 
@@ -248,8 +212,6 @@ bool timeOut(bool previousState, bool testFor)
 {
 	if (previousState == testFor) {
 		lastAction = currentTime;
-
-		Serial.println("Last action reset");
 	}
 
 	return !testFor;
@@ -280,9 +242,6 @@ bool checkTurnOff()
 			lastAlert = currentTime;
 		}
 	}
-
-	Serial.print("Terminate alert: ");
-	Serial.println(terminateAlert);
 
 	return terminateAlert;
 }
