@@ -77,6 +77,10 @@ void loop()
 	terminateAlert = checkTurnOff();
 
 	if (jetsEngaged == false && drainEngaged == false && terminateAlert == false) {
+		Serial.print(jetsEngaged);
+		Serial.print(drainEngaged);
+		Serial.print(terminateAlert);
+		Serial.println("Green");
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
@@ -125,7 +129,8 @@ void tripwireCheck()
 	while (ldrValue < triggerAt) {
 		ldrValue = analogRead(ldrPin);
 
-		indicatorAlert(HIGH, LOW, LOW);
+		indicatorControl(HIGH, LOW, LOW);
+
 		checkTurnOff();
 
 		Serial.print("LDR value: ");
@@ -232,7 +237,7 @@ bool timeOut(bool previousState, bool testFor)
 	if (previousState == testFor) {
 		lastAction = currentTime;
 
-		Serial.print("Last action reset");
+		Serial.println("Last action reset");
 	}
 
 	return !testFor;
@@ -255,7 +260,7 @@ bool checkTurnOff()
 
 	else if ((currentTime - lastAction) >= (terminateTime - terminateNotify)) {
 		if ((currentTime - lastAlert) >= alertDelay) {
-			indicatorControl(pinState, pinState, LOW);
+			indicatorControl(pinState, LOW, LOW);
 
 			pinState = !pinState;
 			lastAlert = currentTime;
@@ -263,6 +268,9 @@ bool checkTurnOff()
 			terminateAlert = true;
 		}
 	}
+
+	Serial.print("Terminate alert: ");
+	Serial.println(terminateAlert);
 
 	return terminateAlert;
 }
