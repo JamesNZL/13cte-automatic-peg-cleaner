@@ -73,11 +73,17 @@ void loop()
 	
 	jetsEngaged = tripwireEngage();
 	drainEngaged = drainEngage();
-	terminateAlert = checkTurnOff();
+	
+	if (jetsEngaged == true || drainEngaged == true) {
+		terminateAlert = checkTurnOff(LOW, LOW, pinState);
+	}
 
+	else {
+		terminateAlert = checkTurnOff(LOW, pinState, LOW);
+	}
 
-	if (jetsEngaged == false && drainEngaged == false && terminateAlert == false && ldrConnected == true) {
-		indicatorControl(LOW, HIGH, LOW);
+	if (jetsEngaged == false && drainEngaged == false && ldrConnected == true) {
+		indicatorUpdate(LOW, HIGH, LOW);
 	}
 }
 
@@ -122,7 +128,7 @@ void tripwireCheck()
 		indicatorUpdate(HIGH, LOW, LOW);
 		tripwireSetup();
 		drainEngage();
-		checkTurnOff();
+		checkTurnOff(pinState, LOW, LOW);
 	}
 	
 	if (ldrValue > triggerAt) {
@@ -227,7 +233,7 @@ bool timeOut(bool previousState, bool testFor)
 	return !testFor;
 }
 
-bool checkTurnOff()
+bool checkTurnOff(byte redOutput, byte greenOutput, byte blueOutput)
 {
 	currentTime = millis();
 	offInput = digitalRead(offButton);
@@ -246,11 +252,11 @@ bool checkTurnOff()
 		terminateAlert = true;
 
 		if ((currentTime - lastAlert) >= alertDelay) {
-			indicatorControl(LOW, pinState, LOW);
+			indicatorControl(redOutput, blueOutput, greenOutput);
 
 			pinState = !pinState;
 			lastAlert = currentTime;
-		}
+		}`
 	}
 
 	return terminateAlert;
