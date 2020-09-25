@@ -129,6 +129,7 @@ void tripwireCheck()
 	while (disarmedValue == 0) {
 		indicatorUpdate(HIGH, LOW, LOW);
 		tripwireSetup();
+		drainEngage();
 		checkTurnOff();
 	}
 	
