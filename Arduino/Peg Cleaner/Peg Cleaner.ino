@@ -9,6 +9,7 @@ int triggerAt;
 int testTotal;
 int waterMinimum = 200;
 
+bool ldrConnected = true;
 bool jetsEngaged = false;
 bool waterDanger = false;
 bool buttonPressed = false;
@@ -76,7 +77,8 @@ void loop()
 	drainEngaged = drainEngage();
 	terminateAlert = checkTurnOff();
 
-	if (jetsEngaged == false && drainEngaged == false && terminateAlert == false) {
+
+	if (jetsEngaged == false && drainEngaged == false && terminateAlert == false && ldrConnected == true) {
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
@@ -125,16 +127,11 @@ void tripwireCheck()
 	ldrValue = analogRead(ldrPin);
 
 	while (disarmedValue == 0) {
-		indicatorControl(HIGH, LOW, LOW);
+		if (terminateAlert == false) {
+			indicatorControl(HIGH, LOW, LOW);
+		}
 
 		tripwireSetup();
-		checkTurnOff();
-	}
-
-	while (ldrValue <= triggerAt) {
-		ldrValue = analogRead(ldrPin);
-
-		indicatorControl(HIGH, LOW, LOW);
 		checkTurnOff();
 	}
 	
@@ -147,12 +144,27 @@ bool tripwireEngage()
 {
 	ldrValue = analogRead(ldrPin);
 
-	if (ldrValue <= triggerAt) {
+	Serial.print("LDR value: ");
+	Serial.println(ldrValue);
+
+	if (ldrValue == 0) {
+		ldrConnected = timeOut(ldrConnected, true);
+
+		digitalWrite(jetGate, LOW);
+
+		if (terminateAlert == false) {
+			indicatorControl(HIGH, LOW, LOW);
+		}
+	}
+
+	else if (ldrValue <= triggerAt) {
 		jetsEngaged = timeOut(jetsEngaged, false);
 		
 		digitalWrite(jetGate, HIGH);
 
-		indicatorControl(LOW, LOW, HIGH);
+		if (terminateAlert == false) {
+			indicatorControl(LOW, LOW, HIGH);
+		}
 
 		return jetsEngaged;
 	} 
@@ -178,11 +190,11 @@ bool drainEngage()
 		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, HIGH);
 
-		if (drainInput == HIGH) {
+		if (drainInput == HIGH && terminateAlert == false) {
 			indicatorControl(LOW, LOW, HIGH);
 		} 
 
-		else {
+		else if (waterValue > waterMinimum && terminateAlert == false) {
 			indicatorControl(HIGH, LOW, LOW);
 		}
 
