@@ -127,10 +127,7 @@ void tripwireCheck()
 	ldrValue = analogRead(ldrPin);
 
 	while (disarmedValue == 0) {
-		if (terminateAlert == false) {
-			indicatorControl(HIGH, LOW, LOW);
-		}
-
+		indicatorUpdate(HIGH, LOW, LOW);
 		tripwireSetup();
 		checkTurnOff();
 	}
@@ -152,9 +149,7 @@ bool tripwireEngage()
 
 		digitalWrite(jetGate, LOW);
 
-		if (terminateAlert == false) {
-			indicatorControl(HIGH, LOW, LOW);
-		}
+		indicatorUpdate(HIGH, LOW, LOW);
 	}
 
 	else if (ldrValue <= triggerAt) {
@@ -162,9 +157,7 @@ bool tripwireEngage()
 		
 		digitalWrite(jetGate, HIGH);
 
-		if (terminateAlert == false) {
-			indicatorControl(LOW, LOW, HIGH);
-		}
+		indicatorUpdate(LOW, LOW, HIGH);
 
 		return jetsEngaged;
 	} 
@@ -190,12 +183,12 @@ bool drainEngage()
 		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, HIGH);
 
-		if (drainInput == HIGH && terminateAlert == false) {
-			indicatorControl(LOW, LOW, HIGH);
+		if (drainInput == HIGH) {
+			indicatorUpdate(LOW, LOW, HIGH);
 		} 
 
-		else if (waterValue > waterMinimum && terminateAlert == false) {
-			indicatorControl(HIGH, LOW, LOW);
+		else {
+			indicatorUpdate(HIGH, LOW, LOW);
 		}
 
 		return true;
@@ -216,6 +209,13 @@ void indicatorControl(byte redOutput, byte greenOutput, byte blueOutput)
 	digitalWrite(redPin, redOutput);
 	digitalWrite(greenPin, greenOutput);
 	digitalWrite(bluePin, blueOutput);
+}
+
+void indicatorUpdate(byte redOutput, byte greenOutput, byte blueOutput) {
+	if (terminateAlert == false) {
+		indicatorControl(redOutput, greenOutput, blueOutput);
+	}
+
 }
 
 void indicatorAlert(byte redOutput, byte greenOutput, byte blueOutput)
