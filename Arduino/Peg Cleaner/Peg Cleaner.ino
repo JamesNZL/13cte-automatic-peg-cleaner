@@ -252,11 +252,11 @@ bool checkTurnOff(byte redOutput, byte greenOutput, byte blueOutput)
 		terminateAlert = true;
 
 		if ((currentTime - lastAlert) >= alertDelay) {
-			indicatorControl(redOutput, blueOutput, greenOutput);
+			indicatorControl(redOutput, greenOutput, blueOutput);
 
 			pinState = !pinState;
 			lastAlert = currentTime;
-		}`
+		}
 	}
 
 	return terminateAlert;
