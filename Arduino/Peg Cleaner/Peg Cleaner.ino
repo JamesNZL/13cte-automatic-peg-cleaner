@@ -60,6 +60,8 @@ void setup()
 	
 	digitalWrite(powerGate, HIGH);
 
+	Serial.begin(9600);
+
 	indicatorControl(HIGH, LOW, LOW);
 	batteryCheck();
 	tripwireSetup();
@@ -101,6 +103,9 @@ void tripwireSetup()
 	for (int i = 0; i < testIterations; i++) {
 		testTotal += analogRead(ldrPin);
 
+		Serial.print("Test total: ");
+		Serial.println(testTotal);
+
 		if (analogRead(ldrPin) == 0) {
 			break;
 		}
@@ -110,6 +115,9 @@ void tripwireSetup()
 
 	disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
+
+	Serial.print("disarmedValue: ");
+	Serial.println(disarmedValue);
 }
 
 void tripwireCheck()
