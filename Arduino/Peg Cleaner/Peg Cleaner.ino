@@ -264,7 +264,6 @@ bool checkTurnOff(byte redOutput, byte greenOutput, byte blueOutput)
 void shutDown()
 {
 	while (true) {
-		indicatorControl(LOW, LOW, LOW);
 		digitalWrite(jetGate, LOW);
 		digitalWrite(drainGate, LOW);
 		digitalWrite(powerGate, LOW);
