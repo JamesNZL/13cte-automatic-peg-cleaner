@@ -138,6 +138,7 @@ void tripwireCheck()
 	Serial.println(triggerAt);
 
 	while (ldrValue < triggerAt) {
+		ldrValue = analogRead(ldrPin);
 		Serial.println("While, RED");
 		Serial.print(ldrValue);
 		Serial.print("  |  ");
