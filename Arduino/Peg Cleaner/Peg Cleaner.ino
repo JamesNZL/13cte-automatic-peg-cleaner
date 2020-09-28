@@ -106,7 +106,14 @@ void batteryCheck()
 
 void tripwireSetup()
 {
+	Serial.println("New execution of tripwireSetup()");
+	Serial.println(testTotal);
+	Serial.println(disarmedValue);
+	Serial.println(triggerAt);
 	digitalWrite(laserPin, LOW);
+	
+	Serial.println("");
+	Serial.println(analogRead(ldrPin));
 
 	for (int i = 0; i < testIterations; i++) {
 		testTotal += analogRead(ldrPin);
@@ -116,10 +123,12 @@ void tripwireSetup()
 		}
 	}
 
+	Serial.println(testTotal);
+
 	digitalWrite(laserPin, HIGH);
 
-	disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
+	Serial.println(triggerAt);
 }
 
 void tripwireCheck()
