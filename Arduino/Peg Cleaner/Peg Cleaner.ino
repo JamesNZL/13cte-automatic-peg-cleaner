@@ -1,12 +1,5 @@
-float batteryValue;
-
-int waterValue;
 int ldrValue;
-int offInput;
-int drainInput;
-int disarmedValue;
 int triggerAt;
-int testTotal;
 int waterMinimum = 200;
 
 bool ldrConnected = true;
@@ -91,7 +84,7 @@ void loop()
 
 void batteryCheck()
 {
-	batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
+	float batteryValue = analogRead(batteryPin) * (5.0 / 1023.0);
 
 	if (batteryValue < batteryLow) {
 		indicatorAlert(HIGH, LOW, LOW);
@@ -106,10 +99,13 @@ void batteryCheck()
 
 void tripwireSetup()
 {
+	int testTotal = 0;
+
 	Serial.println("New execution of tripwireSetup()");
 	Serial.println(testTotal);
 	Serial.println(disarmedValue);
 	Serial.println(triggerAt);
+
 	digitalWrite(laserPin, LOW);
 	
 	Serial.println("");
@@ -127,7 +123,9 @@ void tripwireSetup()
 
 	digitalWrite(laserPin, HIGH);
 
+	int disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
+
 	Serial.println(triggerAt);
 }
 
@@ -191,8 +189,8 @@ bool tripwireEngage()
 
 bool drainEngage()
 {
-	waterValue = analogRead(waterPin);
-	drainInput = digitalRead(drainButton);
+	int waterValue = analogRead(waterPin);
+	int drainInput = digitalRead(drainButton);
 
 	if (waterValue > waterMinimum || drainInput == HIGH) {
 		waterDanger = timeOut(waterDanger, false);
@@ -258,7 +256,7 @@ bool timeOut(bool previousState, bool testFor)
 bool checkTurnOff(byte redOutput, byte greenOutput, byte blueOutput)
 {
 	currentTime = millis();
-	offInput = digitalRead(offButton);
+	int offInput = digitalRead(offButton);
 
 	terminateAlert = false;
 
