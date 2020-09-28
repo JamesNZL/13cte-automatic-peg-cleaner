@@ -110,7 +110,7 @@ void tripwireSetup()
 			Serial.println(fluctuation);
 
 			if (fluctuation > 10) {
-				Serial.println("Fluctuation triggered");
+				break;
 			}
 		}
 
@@ -123,9 +123,6 @@ void tripwireSetup()
 		Serial.print(" (+");
 		Serial.print(analogRead(ldrPin));
 		Serial.println(")");
-		if (analogRead(ldrPin) == 0) {
-			break;
-		}
 	}
 
 	digitalWrite(laserPin, HIGH);
