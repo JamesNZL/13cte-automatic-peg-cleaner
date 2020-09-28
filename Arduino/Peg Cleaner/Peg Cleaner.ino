@@ -124,7 +124,7 @@ void tripwireCheck()
 {
 	ldrValue = analogRead(ldrPin);
 
-	while (disarmedValue == 0) {
+	while (ldrValue < triggerAt) {
 		indicatorUpdate(HIGH, LOW, LOW);
 		tripwireSetup();
 		checkTurnOff(pinState, LOW, LOW);
