@@ -51,8 +51,6 @@ void setup()
 	pinMode(greenPin, OUTPUT);
 	pinMode(bluePin, OUTPUT);
 	pinMode(laserPin, OUTPUT);
-
-	Serial.begin(9600);
 	
 	digitalWrite(powerGate, HIGH);
 
@@ -101,15 +99,7 @@ void tripwireSetup()
 {
 	int testTotal = 0;
 
-	Serial.println("New execution of tripwireSetup()");
-	Serial.println(testTotal);
-	Serial.println(disarmedValue);
-	Serial.println(triggerAt);
-
 	digitalWrite(laserPin, LOW);
-	
-	Serial.println("");
-	Serial.println(analogRead(ldrPin));
 
 	for (int i = 0; i < testIterations; i++) {
 		testTotal += analogRead(ldrPin);
@@ -119,40 +109,25 @@ void tripwireSetup()
 		}
 	}
 
-	Serial.println(testTotal);
-
 	digitalWrite(laserPin, HIGH);
 
 	int disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
-
-	Serial.println(triggerAt);
 }
 
 void tripwireCheck()
 {
 	ldrValue = analogRead(ldrPin);
 
-	Serial.print(ldrValue);
-	Serial.print("  |  ");
-	Serial.println(triggerAt);
-
 	while (ldrValue < triggerAt) {
 		ldrValue = analogRead(ldrPin);
-		Serial.println("While, RED");
-		Serial.print(ldrValue);
-		Serial.print("  |  ");
-		Serial.println(triggerAt);
+
 		indicatorUpdate(HIGH, LOW, LOW);
 		tripwireSetup();
 		checkTurnOff(pinState, LOW, LOW);
 	}
 	
 	if (ldrValue > triggerAt) {
-		Serial.println("If, GREEN");
-		Serial.print(ldrValue);
-		Serial.print("  |  ");
-		Serial.println(triggerAt);
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
