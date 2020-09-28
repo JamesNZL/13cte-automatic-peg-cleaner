@@ -58,6 +58,8 @@ void setup()
 	pinMode(greenPin, OUTPUT);
 	pinMode(bluePin, OUTPUT);
 	pinMode(laserPin, OUTPUT);
+
+	Serial.begin(9600);
 	
 	digitalWrite(powerGate, HIGH);
 
@@ -124,13 +126,25 @@ void tripwireCheck()
 {
 	ldrValue = analogRead(ldrPin);
 
+	Serial.print(ldrValue);
+	Serial.print("  |  ");
+	Serial.println(triggerAt);
+
 	while (ldrValue < triggerAt) {
+		Serial.println("While, RED");
+		Serial.print(ldrValue);
+		Serial.print("  |  ");
+		Serial.println(triggerAt);
 		indicatorUpdate(HIGH, LOW, LOW);
 		tripwireSetup();
 		checkTurnOff(pinState, LOW, LOW);
 	}
 	
 	if (ldrValue > triggerAt) {
+		Serial.println("If, GREEN");
+		Serial.print(ldrValue);
+		Serial.print("  |  ");
+		Serial.println(triggerAt);
 		indicatorControl(LOW, HIGH, LOW);
 	}
 }
