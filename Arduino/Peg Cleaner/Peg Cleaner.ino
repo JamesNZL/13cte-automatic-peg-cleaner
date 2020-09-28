@@ -104,12 +104,14 @@ void tripwireSetup()
 	digitalWrite(laserPin, LOW);
 
 	for (int i = 0; i < testIterations; i++) {
-		int fluctuation = abs(analogRead(ldrPin) - (testTotal/i));
-		Serial.print("Fluctuation: ");
-		Serial.println(fluctuation);
+		if (i > 0) {
+			int fluctuation = abs(analogRead(ldrPin) - (testTotal/i));
+			Serial.print("Fluctuation: ");
+			Serial.println(fluctuation);
 
-		if (fluctuation > 10 && i != 0) {
-			Serial.println("Fluctuation triggered");
+			if (fluctuation > 10) {
+				Serial.println("Fluctuation triggered");
+			}
 		}
 
 		testTotal += analogRead(ldrPin);
