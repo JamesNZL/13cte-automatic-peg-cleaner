@@ -44,8 +44,6 @@ void setup()
 	pinMode(offButton, INPUT);
 	pinMode(drainButton, INPUT);
 
-	Serial.begin(9600);
-
 	pinMode(powerGate, OUTPUT);
 	pinMode(jetGate, OUTPUT);
 	pinMode(powerGate, OUTPUT);
@@ -115,24 +113,12 @@ void tripwireSetup()
 		}
 
 		testTotal += analogRead(ldrPin);
-
-		Serial.print("Iteration: ");
-		Serial.println(i);
-		Serial.print("Test total: ");
-		Serial.print(testTotal);
-		Serial.print(" (+");
-		Serial.print(analogRead(ldrPin));
-		Serial.println(")");
 	}
 
 	digitalWrite(laserPin, HIGH);
 
 	int disarmedValue = testTotal / testIterations;
 	triggerAt = (maximumValue + disarmedValue) / 2;
-
-	Serial.print("Trigger at: ");
-	Serial.println(triggerAt);
-	Serial.println("");
 }
 
 void tripwireCheck()
