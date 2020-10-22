@@ -1,0 +1,956 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fl",
+				"fluctuation"
+			],
+			[
+				"ldr",
+				"ldrPin"
+			],
+			[
+				"te",
+				"testTotal"
+			],
+			[
+				"pin",
+				"pinState"
+			],
+			[
+				"termin",
+				"terminateAlert"
+			],
+			[
+				"indi",
+				"indicatorControl"
+			],
+			[
+				"terminate",
+				"terminateAlert"
+			],
+			[
+				"drainEn",
+				"drainEngaged"
+			],
+			[
+				"jet",
+				"jetsEngaged"
+			],
+			[
+				"Trigg",
+				"Trigger"
+			],
+			[
+				"tri",
+				"triggerAt"
+			],
+			[
+				"indica",
+				"indicatorControl"
+			],
+			[
+				"termina",
+				"terminateNotify"
+			],
+			[
+				"indicator",
+				"indicatorControl"
+			],
+			[
+				"indicat",
+				"indicatorAlert"
+			],
+			[
+				"off",
+				"offButton"
+			],
+			[
+				"end",
+				"end_of_map\tstatement"
+			],
+			[
+				"SCREEN",
+				"SCREEN_WIDTH\tstatement"
+			],
+			[
+				"phsic",
+				"physics_engine\tstatement"
+			],
+			[
+				"BLUE",
+				"BLUE_VIOLET\tstatement"
+			],
+			[
+				"opponent",
+				"opponentHealth"
+			],
+			[
+				"oppo",
+				"opponentName"
+			],
+			[
+				"initi",
+				"initiative"
+			],
+			[
+				"INITI",
+				"INITIATIVE_MAXIMUM"
+			],
+			[
+				"INITIA",
+				"INITIATIVE_MINIMUM"
+			],
+			[
+				"STREN",
+				"STRENGTH_MAXIMUM"
+			],
+			[
+				"M",
+				"MINIMUM_INPUT"
+			],
+			[
+				"range",
+				"rangeMaximum"
+			],
+			[
+				"bi",
+				"birthMonth"
+			],
+			[
+				"int",
+				"input\tfunction"
+			],
+			[
+				"for",
+				"for\tArduino for"
+			],
+			[
+				"if",
+				"if\tArduino if"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Arduino/Peg Cleaner/Peg Cleaner.ino",
+			"settings":
+			{
+				"buffer_size": 5279,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/James/Downloads/ArduinoISP/ArduinoISP.ino",
+			"settings":
+			{
+				"buffer_size": 16984,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"quick",
+				"git: quick stage current file and commit"
+			],
+			[
+				"diff",
+				"git: diff current file inline"
+			],
+			[
+				"file his",
+				"git: File History"
+			],
+			[
+				"grap",
+				"git: graph current file"
+			],
+			[
+				"git: quick",
+				"git: quick stage current file and commit"
+			],
+			[
+				"comm",
+				"git: commit"
+			],
+			[
+				"stage",
+				"git: quick stage"
+			],
+			[
+				"commit",
+				"git: commit including unstaged files"
+			],
+			[
+				"quic\t",
+				"git: quick stage current file and commit"
+			],
+			[
+				"quic",
+				"git: quick stage current file and commit"
+			],
+			[
+				"stage ",
+				"git: quick stage"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"q",
+				"git: quick stage current file and commit"
+			],
+			[
+				"quicks",
+				"git: quick stage current file and commit"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"commi",
+				"git: quick commit"
+			],
+			[
+				"delete",
+				"File Manager: Delete"
+			],
+			[
+				"enable pak",
+				"Package Control: Enable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"delet",
+				"File Manager: Delete"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"terminus",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"enable pa",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"list pak",
+				"Package Control: List Packages"
+			],
+			[
+				"clone",
+				"git: clone"
+			],
+			[
+				"repositor",
+				"Package Control: Add Repository"
+			],
+			[
+				"reflo",
+				"git: reflog"
+			],
+			[
+				"log",
+				"git: log"
+			],
+			[
+				"graph",
+				"git: graph current file"
+			],
+			[
+				"file",
+				"git: mv current file"
+			],
+			[
+				"history",
+				"Sublime Merge: File History"
+			],
+			[
+				"change",
+				"git: generate changelog"
+			],
+			[
+				"ardu",
+				"Set Syntax: Arduino"
+			],
+			[
+				"help",
+				"GitSavvy: help"
+			],
+			[
+				"status",
+				"git: status"
+			],
+			[
+				"blame",
+				"git: blame current file"
+			],
+			[
+				"git fi",
+				"git: File history"
+			],
+			[
+				"git bla",
+				"git: blame current file"
+			],
+			[
+				"git histor",
+				"git: File history"
+			],
+			[
+				"log cu",
+				"git: log current file"
+			],
+			[
+				"git ",
+				"git: generate changelog"
+			],
+			[
+				"git f",
+				"git: File history"
+			],
+			[
+				"git",
+				"git: File history"
+			],
+			[
+				"anno",
+				"Git: Toggle Annotations"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"github",
+				"Github: History"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"terminus ut",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Arduino if"
+			],
+			[
+				"package control inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: enable\tpack",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Ins",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 209.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/James/Documents/2020/13CTE",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Laser_Diode",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Laser_Tripwire",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/MOSFET_Power_Switch",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Peg Cleaner",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/RGB_Led",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Water_Level_Sensor",
+		"/C/Users/James/Documents/2020/13CTE/General"
+	],
+	"file_history":
+	[
+		"/C/Users/James/Documents/2019/12CTE/Robot_Code_2_Sensors/Robot_Code_2_Sensors.ino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Peg Cleaner/Peg Cleaner.ino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Water_Level_Sensor/Water_Level_Sensor.ino",
+		"/C/Users/James/Documents/2020/13CTE/General/COM8 - Serial Monitor 24 Sep",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python Internal/Game/own_map.py",
+		"/C/Users/James/Downloads/ArduinoISP/ArduinoISP.ino",
+		"/C/Users/James/Downloads/ArduinoISP.ino",
+		"/C/Users/James/Downloads/DBruan.ino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/MOSFET_Power_Switch/MOSFET_Power_Switch.ino",
+		"/C/Users/James/Documents/2020/13CTE/13CTE.sublime-project",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/RGB_Led/RGB_Led.ino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Project/Project.ino",
+		"/C/Users/James/Documents/2020/13CTE/General/Notes.ino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Software Algorithm.png",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Laser_Tripwire/Laser_Tripwire.ino",
+		"/C/Users/James/Documents/2020/13CTE/Automatic Peg Cleaner/Arduino/Laser_Diode/Laser_Diode.ino",
+		"/C/Program Files (x86)/Arduino/examples/06.Sensors/Memsic2125/Memsic2125.ino",
+		"/C/Program Files (x86)/Arduino/examples/01.Basics/Blink/Blink.ino",
+		"/C/Users/James/Videos/own_map.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/own_map2.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/own_map.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/open_window.py",
+		"/C/Users/James/Downloads/AdminBot.py",
+		"/C/Users/James/Downloads/Attendance-Bot-master/run.py",
+		"/C/Users/James/Downloads/Attendance-Bot-master/commands/attendance.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/The Battle v3.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/Person.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/Numbers.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/Pet.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/Rectangle.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/Student.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/The Battle v2.py",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/The Battle.py",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Terminus Python.sublime-build",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Terminus.sublime-build",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/AS 91373 Practice Assessment Program.py",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/Python/Refresh Activity v2.py",
+		"/C/Users/James/Documents/Default.sublime-project",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/FileIcons/package.json",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/mdpopups/dependency-metadata.json",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/FileIcons/build/icons.json",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/scripts.js",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/contact.html",
+		"/C/Users/James/Documents/2019/12DTP/AS 91373 Practice Assessment Program (1).py",
+		"/C/Users/James/AppData/Roaming/Sublime Merge/Packages/User/Preferences.sublime-settings",
+		"/C/Users/James/Documents/2019/12DTP/sublime.py",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/Theme - Monokai Pro/Theme - Monokai Pro.sublime-settings",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Theme - Monokai Pro.sublime-settings",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/stylesheet.css",
+		"/C/Users/James/Documents/2020/13CTE/Notes.txt",
+		"/C/Program Files/Sublime Text 3/Packages/Color Scheme - Default.sublime-package",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Terminus.sublime-settings",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/Terminus/Terminus.sublime-settings",
+		"/C/Users/James/Documents/2019/12DTP/Dream Pizzas.py",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/python3.sublime-build",
+		"/C/Users/James/Documents/2019/12DTP/AS 91373 Practice Assessment Program.py",
+		"/C/Program Files (x86)/Arduino/examples/02.Digital/Debounce/Debounce.ino",
+		"/C/Program Files (x86)/Arduino/examples/02.Digital/BlinkWithoutDelay/BlinkWithoutDelay.ino",
+		"/C/Program Files (x86)/Arduino/examples/05.Control/ForLoopIteration/ForLoopIteration.ino",
+		"/C/Program Files (x86)/Arduino/examples/08.Strings/StringComparisonOperators/StringComparisonOperators.ino",
+		"/C/Program Files (x86)/Arduino/examples/04.Communication/MultiSerial/MultiSerial.ino",
+		"/C/Program Files (x86)/Arduino/examples/01.Basics/DigitalReadSerial/DigitalReadSerial.ino",
+		"/C/Program Files (x86)/Arduino/examples/04.Communication/ReadASCIIString/ReadASCIIString.ino",
+		"/C/Program Files (x86)/Arduino/examples/09.USB/KeyboardAndMouseControl/KeyboardAndMouseControl.ino",
+		"/C/Program Files (x86)/Arduino/examples/11.ArduinoISP/ArduinoISP/ArduinoISP.ino",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/index.html",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/safety.html",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/join.html",
+		"/C/Users/James/OneDrive - Westlake Boys High School/2020/13DTP/rbocc/about.html",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
+		"/C/Users/James/Documents/Snippets.ino",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/C/Program Files (x86)/Arduino/examples/01.Basics/BareMinimum/BareMinimum.ino",
+		"/C/Program Files (x86)/Arduino/examples/04.Communication/ASCIITable/ASCIITable.ino",
+		"/C/Users/James/AppData/Local/Arduino15/packages.stino-settings",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Stino/app_dir.stino-settings"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Serial",
+			"Serial.",
+			"Serial.*",
+			"Serial.print(\"disarmedValue: \");",
+			"Serial",
+			"jetsEngaged",
+			"currentTime",
+			"pinState",
+			"terminateAlert",
+			"ldrConnected",
+			"triggerAt",
+			"waterMinimum",
+			"testTotal",
+			"triggerAt",
+			"disarmedValue",
+			"drainInput",
+			"offInput",
+			"ldrValue",
+			"batteryValue",
+			"waterValue",
+			"checkTurnOff",
+			"Serial",
+			"Serialx",
+			"while",
+			"if (terminateAlert == false) {",
+			"indicatorCont",
+			"Serial.",
+			"indicatorControl(LOW, HIGH, LOW)",
+			">=",
+			"HIGH, HIGH, LOW",
+			"indicatorAlert",
+			"waterValue",
+			"ldrValue",
+			"drainIn",
+			"offInput",
+			"checkTurnOff",
+			"0.5",
+			"indicatorControl(HIGH, LOW, LOW)",
+			"indicatorAlert",
+			"sensorPin",
+			"sensorValue",
+			"ladder",
+			"levels",
+			"self.end_of_map",
+			"client",
+			"WEAPON",
+			"user_input",
+			"self.",
+			"game.",
+			"- INDEX_OFFSET]",
+			"minimum_input",
+			"dob"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"ldrPin",
+			"ldrValue",
+			"bot",
+			"RACE",
+			"game.",
+			"dateOfBirth"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Arduino/Peg Cleaner/Peg Cleaner.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2311,
+								2311
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2410,
+										2411
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.bluish brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2039,
+										2040
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"git_savvy.repo_path": "C:\\Users\\James\\Documents\\2020\\13CTE\\Automatic Peg Cleaner",
+							"syntax": "Packages/Stino-Stino-Dev/Arduino.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/James/Downloads/ArduinoISP/ArduinoISP.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/Stino-Stino-Dev/Arduino.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 216.0
+	},
+	"output.Terminus":
+	{
+		"height": 109.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 109.0
+	},
+	"output.Terminus 3":
+	{
+		"height": 109.0
+	},
+	"output.Terminus 4":
+	{
+		"height": 288.0
+	},
+	"output.Terminus 5":
+	{
+		"height": 109.0
+	},
+	"output.Terminus 6":
+	{
+		"height": 330.0
+	},
+	"output.Terminus 7":
+	{
+		"height": 109.0
+	},
+	"output.Terminus 8":
+	{
+		"height": 395.0
+	},
+	"output.Terminus 9":
+	{
+		"height": 109.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 439.0
+	},
+	"output.exec":
+	{
+		"height": 245.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 109.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.show_commit_info":
+	{
+		"height": 392.0
+	},
+	"output.stino_build_panel":
+	{
+		"height": 348.0
+	},
+	"output.stino_panel":
+	{
+		"height": 109.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 109.0
+	},
+	"pinned_build_system": "Packages/User/Terminus Python.sublime-build",
+	"project": "Automatic Peg Cleaner.sublime-project",
+	"replace":
+	{
+		"height": 71.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\James\\OneDrive - Westlake Boys High School\\2020\\13DTP\\Python Internal\\Platformer.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
