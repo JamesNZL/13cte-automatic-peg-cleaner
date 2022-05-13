@@ -22,7 +22,7 @@ My NCEA Level 3 Control Technology project, for 13CTE.
 
 ## Circuit Schematic
 
-![Circuit schematic](./Photo%20Evidence/schematic.png)
+![Circuit schematic](./Photo%20Evidence/schematic.svg)
 
 ## PCB Design & 3D Render
 
