@@ -1,6 +1,10 @@
 # Automatic Peg Cleaner
 
-My NCEA Level 3 Control Technology project, for 13CTE.
+## Assessment Submissions
+
+- [Brief Development `AS 91698`](./Documentation/Brief%20Development%20AS%2091698.pdf) (Achieved with Excellence)
+- [Prototyping `AS 91611`](./Documentation/Prototyping%20AS%2091611.pdf) (Achieved with Excellence)
+- [Electronics `AS 91904`](./Documentation/Electronics%20AS%2091904.pdf) (Achieved with Excellence)
 
 ## Issue
 
